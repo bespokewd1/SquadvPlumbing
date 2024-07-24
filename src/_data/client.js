@@ -1,8 +1,8 @@
 module.exports = {
-    "name": "Code Stitch Web Designs",
-    "email": "help@codestitch.app",
+    "name": "Montano Plumbing & Contracting LTD.",
+    "email": "yeg.mpc@gmail.com",
     "phoneForTel": "555-779-4407",
-    "phoneFormatted": "(555) 779-4407",
+    "phoneFormatted": "+1 780-708-5345",
     "address": {
         "lineOne": "First Address Line",
         "lineTwo": "Second Address Line",
@@ -12,7 +12,7 @@ module.exports = {
         "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
     },
     "socials": {
-        "facebook": "https://www.facebook.com/",
+        "facebook": "https://www.facebook.com/yeg.mpc/",
         "instagram": "https://www.instagram.com/",
     },
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
