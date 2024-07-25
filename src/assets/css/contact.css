@@ -306,7 +306,8 @@
     padding: var(--sectionPadding);
     overflow: hidden;
     position: relative;
-    z-index: 1;
+    z-index: -1;
+    background-color: #4295cd;
   }
   #contact-1750 .cs-container {
     width: 100%;

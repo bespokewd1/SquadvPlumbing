@@ -4,12 +4,12 @@ module.exports = {
     "phoneForTel": "555-779-4407",
     "phoneFormatted": "+1 780-708-5345",
     "address": {
-        "lineOne": "First Address Line",
-        "lineTwo": "Second Address Line",
-        "city": "Denver",
-        "state": "CO",
-        "zip": "80206",
-        "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
+        "lineOne": "",
+        "lineTwo": "",
+        "city": "Edmonoton, Alberta Canada",
+        "state": "",
+        "zip": "",
+        "mapLink": "https://maps.app.goo.gl/N5znB9zQ7S7DxkoWA"
     },
     "socials": {
         "facebook": "https://www.facebook.com/yeg.mpc/",
