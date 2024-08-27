@@ -680,7 +680,8 @@
     padding: 0;
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
-    background-color: #3952A2;
+    background: #239bec;
+    background: linear-gradient(280deg, #239bec 0%, #185fc9 17%, #1055bc 39%, #0d418e 57%, #062f6b 100%);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: fixed;
     z-index: 10000;
@@ -701,7 +702,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 1.5rem;
-    background-color: #3952A2;
+    background: rgba(35, 155, 236, 0);
   }
   #cs-navigation .cs-contact-group {
     display: flex;

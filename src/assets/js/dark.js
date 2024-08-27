@@ -80,4 +80,6 @@ class CS_GalleryFilter {
 }
 
 new CS_GalleryFilter();
+
+                 
                                 
