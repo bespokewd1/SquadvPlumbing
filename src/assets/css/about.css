@@ -64,7 +64,8 @@
     padding: 0 1.5rem;
     overflow: hidden;
     border-radius: 0.25rem;
-    background-color: var(--primary);
+    background: #239bec;
+    background: linear-gradient(280deg, #239bec 0%, #1055bc 50%, #185fc9 100%);
     display: inline-block;
     position: relative;
     z-index: 1;

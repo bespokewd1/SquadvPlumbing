@@ -2,7 +2,7 @@
 title: 'Montano Plumbing & Contracting LTD.'
 description: 'Meta description for the page'
 preloadImg: '/assets/images/landing.jpg'
-permalink: 'index/'
+permalink: '/'
 tags: 'sitemap' # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
 eleventyNavigation:
   key: Home
@@ -40,24 +40,65 @@ eleventyNavigation:
 <!--                    Hero                      -->
 <!-- ============================================ -->
 
-<section id="hero-1957">
+ 
+
+
+<div class="carousel">
+    <div class="carousel-inner">
+        
+            
+        
+        <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+        <div class="carousel-item">
+            <img src="/assets/images/7.png">
+            
+            
+        </div>
+        <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+        <div class="carousel-item">
+            <img  src="/assets/images/8.png">
+        </div>
+        <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+        <div class="carousel-item">
+            <img src="/assets/images/9.png">
+        </div>
+        <label for="carousel-3" class="carousel-control prev control-1">‹</label>
+        <label for="carousel-2" class="carousel-control next control-1">›</label>
+        <label for="carousel-1" class="carousel-control prev control-2">‹</label>
+        <label for="carousel-3" class="carousel-control next control-2">›</label>
+        <label for="carousel-2" class="carousel-control prev control-3">‹</label>
+        <label for="carousel-1" class="carousel-control next control-3">›</label>
+        
+        <ol class="carousel-indicators">
+            <li>
+                <label for="carousel-1" class="carousel-bullet">•</label>
+            </li>
+            <li>
+                <label for="carousel-2" class="carousel-bullet">•</label>
+            </li>
+            <li>
+                <label for="carousel-3" class="carousel-bullet">•</label>
+            </li>
+           
+        </ol>
+        
+    </div>
+    
+</div>
+<section id="cta-1693">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper"></span>
-            <h1 class="cs-title">Plumbing, Heating, Gasfitting and
-                Renovation for Edmonton 
-                and Surrounding Areas</h1>
-            <p class="cs-text">Your Trusted Partner for Renovations and Plumbing.</p>
-            <a href="/contact" class="cs-button-solid">Call for Quote</a>
+            <h2 class="cs-title"></h2>
+            <a href="https://www.financeit.ca/s/PBTFXw" class="cs-button-solid">We offer financing from
+                $2,000 to $100,000</a>
         </div>
     </div>
-    <!-- Background Image, there's a background image in the CSS for the parallax effect you'll need to change as well if you swap out our images -->
-    <picture class="cs-background">
-        <source media="(max-width: 600px)" srcset="/assets/images/RENOVATIONHERO.jpg">
-        <source media="(min-width: 601px)" srcset="/assets/images/RENOVATIONHERO.jpg">
-        <img decoding="async" src="/assets/images/RENOVATIONHERO.jpg" alt="healthcare professionals" width="1920" height="746" aria-hidden="true">
-    </picture>
+    <div class="cs-wrapper">
+        <img class="cs-graphic cs-graphic-1" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-logo.png" alt="logo" height="372" width="372" loading="lazy" decoding="async">
+        <img class="cs-graphic cs-graphic-2" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-logo.png" alt="logo" height="372" width="372" loading="lazy" decoding="async">
+    </div>
 </section>
+
 
 <!-- ============================================ -->
 <!--                   Services                   -->
@@ -137,24 +178,7 @@ eleventyNavigation:
     </div>
 </section>
                                 
-<!-- ============================================ -->
-<!--                     CTA                      -->
-<!-- ============================================ -->
-
-<section id="cta-1693">
-    <div class="cs-container">
-        <div class="cs-content">
-            <h2 class="cs-title">We offer financing on any plumbing/heating installation and home renovation
-                projects ranging from $2,000 to $100,000.</h2>
-            <a href="" class="cs-button-solid">Get Financing</a>
-        </div>
-    </div>
-    <div class="cs-wrapper">
-        <img class="cs-graphic cs-graphic-1" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-logo.png" alt="logo" height="372" width="372" loading="lazy" decoding="async">
-        <img class="cs-graphic cs-graphic-2" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-logo.png" alt="logo" height="372" width="372" loading="lazy" decoding="async">
-    </div>
-</section>
-                   
+             
 
 <!-- ============================================ -->
 <!--                   Stats                      -->
@@ -208,7 +232,7 @@ eleventyNavigation:
             <h2 class="cs-title"><span class="cs-color">Financing Available </span> for Home Renovation and Plumbing & Heating Installation Projects!</h2>
             <p class="cs-text">
                 Secure financing from $2,000 up to $100,000 for installations and renovations.            </p>
-            <a href="" class="cs-button-solid">Learn More</a>
+            <a href="https://www.financeit.ca/s/PBTFXw" class="cs-button-solid">Learn More</a>
            
         
             
@@ -229,7 +253,8 @@ eleventyNavigation:
 <!-- ============================================ -->
 <!--                     CTA                      -->
 <!-- ============================================ -->
-<section id="cta-1693">
+<section  id="cta-1693">
+    
     <div class="cs-container">
         <div class="cs-content">
             <h2 class="cs-title">We offer financing on any plumbing/heating installation and home renovation
@@ -416,7 +441,7 @@ eleventyNavigation:
                 </div>
             </li>
         </ul>
-        <a href="https://www.google.com/maps/place/Montano+Plumbing+%26+Contracting+Ltd./@53.4633179,-113.6871153,10.3z/data=!4m8!3m7!1s0x6988ef8116c31817:0x3e9a65105016fe79!8m2!3d53.3415156!4d-113.3602913!9m1!1b1!16s%2Fg%2F11kqbxgl6z?hl=en&entry=ttu" class="cs-button-5">
+        <a target="_blank" href="https://www.google.com/maps/place/Montano+Plumbing+%26+Contracting+Ltd./@53.4633179,-113.6871153,10.3z/data=!4m8!3m7!1s0x6988ef8116c31817:0x3e9a65105016fe79!8m2!3d53.3415156!4d-113.3602913!9m1!1b1!16s%2Fg%2F11kqbxgl6z?hl=en&entry=ttu" class="cs-button-5">
             <span class="cs-button-text">Read More</span>
         </a>
     </div>
@@ -541,353 +566,7 @@ eleventyNavigation:
            
 
 
-<!-- ============================================ -->
-<!--                     CTA                      -->
-<!-- ============================================ -->
-<section id="cta-1693">
-    <div class="cs-container">
-        <div class="cs-content">
-            <h2 class="cs-title">We offer financing on any plumbing/heating installation and home renovation
-                projects ranging from $2,000 to $100,000.</h2>
-            <a href="" class="cs-button-solid">Get Financing</a>
-        </div>
-    </div>
-    <div class="cs-wrapper">
-        <img class="cs-graphic cs-graphic-1" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-logo.png" alt="logo" height="372" width="372" loading="lazy" decoding="async">
-        <img class="cs-graphic cs-graphic-2" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-logo.png" alt="logo" height="372" width="372" loading="lazy" decoding="async">
-    </div>
-</section>
 
-
-<!-- ============================================ -->
-<!--                Meet The Team                 -->
-<!-- ============================================ -->
-
-<section id="meet-team-1435">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">Our Team</span>
-            <h2 class="cs-title">MPC Team Members</h2>
-            <p class="cs-text">
-                <!-- At Stitch Cleaning Service, let us help you solve problems so that you can focus on your mission. We support businesses through periods of expansion, succession. -->
-            </p>
-        </div>
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <picture class="cs-picture">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)"
-                            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/non-profit-team-one.png">
-                    <!--Tablet and above Image-->
-                    <source media="(min-width: 601px)"
-                            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/non-profit-team-one.png">
-                    <img loading="lazy" decoding="async"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/non-profit-team-one.png" alt="volunteer"
-                            width="305" height="338">
-                </picture>
-                <div class="cs-info">
-                    <span class="cs-name">Esther Howard</span>
-                    <span class="cs-job">Project Manager</span>
-                    <div class="cs-social-group">
-                        <a href="" class="cs-link" aria-label="visit linkedin">
-                            <img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-tax2.svg"
-                                    alt="linkedin" width="12" height="12">
-                        </a>
-                        <a href="" class="cs-link" aria-label="visit twitter">
-                            <img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-tax2.svg"
-                                    alt="twitter" width="12" height="12">
-                        </a>
-                        <a href="" class="cs-link" aria-label="visit instragram">
-                            <img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-tax2.svg"
-                                    alt="instragram" width="12" height="12">
-                        </a>
-                        <a href="" class="cs-link" aria-label="visit youtube">
-                            <img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube-tax2.svg"
-                                    alt="youtube" width="12" height="12">
-                        </a>
-                    </div>
-                </div>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-picture">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)"
-                            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/non-profit-team-two.png">
-                    <!--Tablet and above Image-->
-                    <source media="(min-width: 601px)"
-                            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/non-profit-team-two.png">
-                    <img loading="lazy" decoding="async"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/non-profit-team-two.png" alt="volunteer"
-                            width="305" height="338">
-                </picture>
-                <div class="cs-info">
-                    <span class="cs-name">Jenny Wilson</span>
-                    <span class="cs-job">Volunteer</span>
-                    <div class="cs-social-group">
-                        <a href="" class="cs-link" aria-label="visit linkedin">
-                            <img img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-tax2.svg"
-                                    alt="linkedin" width="12" height="12">
-                        </a>
-                        <a href="" class="cs-link" aria-label="visit twitter">
-                            <img img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-tax2.svg"
-                                    alt="twitter" width="12" height="12">
-                        </a>
-                        <a href="" class="cs-link" aria-label="visit instragram">
-                            <img img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-tax2.svg"
-                                    alt="instragram" width="12" height="12">
-                        </a>
-                        <a href="" class="cs-link" aria-label="visit youtube">
-                            <img img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube-tax2.svg"
-                                    alt="youtube" width="12" height="12">
-                        </a>
-                    </div>
-                </div>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-picture">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)"
-                            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/non-profit-team-three.png">
-                    <!--Tablet and above Image-->
-                    <source media="(min-width: 601px)"
-                            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/non-profit-team-three.png">
-                    <img loading="lazy" decoding="async"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/non-profit-team-three.png" alt="volunteer"
-                            width="305" height="338">
-                </picture>
-                <div class="cs-info">
-                    <span class="cs-name">Jacob Jones</span>
-                    <span class="cs-job">Volunteer</span>
-                    <div class="cs-social-group">
-                        <a href="" class="cs-link" aria-label="visit linkedin">
-                            <img img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-tax2.svg"
-                                    alt="linkedin" width="12" height="12">
-                        </a>
-                        <a href="" class="cs-link" aria-label="visit twitter">
-                            <img img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-tax2.svg"
-                                    alt="twitter" width="12" height="12">
-                        </a>
-                        <a href="" class="cs-link" aria-label="visit instragram">
-                            <img img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-tax2.svg"
-                                    alt="instragram" width="12" height="12">
-                        </a>
-                        <a href="" class="cs-link" aria-label="visit youtube">
-                            <img img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube-tax2.svg"
-                                    alt="youtube" width="12" height="12">
-                        </a>
-                    </div>
-                </div>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-picture">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)"
-                            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/non-profit-team-four.png">
-                    <!--Tablet and above Image-->
-                    <source media="(min-width: 601px)"
-                            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/non-profit-team-four.png">
-                    <img loading="lazy" decoding="async"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/non-profit-team-four.png" alt="volunteer"
-                            width="305" height="338">
-                </picture>
-                <div class="cs-info">
-                    <span class="cs-name">Leslie Alexander</span>
-                    <span class="cs-job">Volunteer</span>
-                    <div class="cs-social-group">
-                        <a href="" class="cs-link" aria-label="visit linkedin">
-                            <img img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-tax2.svg"
-                                    alt="linkedin" width="12" height="12">
-                        </a>
-                        <a href="" class="cs-link" aria-label="visit twitter">
-                            <img img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-tax2.svg"
-                                    alt="twitter" width="12" height="12">
-                        </a>
-                        <a href="" class="cs-link" aria-label="visit instragram">
-                            <img img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-tax2.svg"
-                                    alt="instragram" width="12" height="12">
-                        </a>
-                        <a href="" class="cs-link" aria-label="visit youtube">
-                            <img img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube-tax2.svg"
-                                    alt="youtube" width="12" height="12">
-                        </a>
-                    </div>
-                </div>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-picture">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)"
-                            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/non-profit-team-one.png">
-                    <!--Tablet and above Image-->
-                    <source media="(min-width: 601px)"
-                            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/non-profit-team-one.png">
-                    <img loading="lazy" decoding="async"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/non-profit-team-one.png" alt="volunteer"
-                            width="305" height="338">
-                </picture>
-                <div class="cs-info">
-                    <span class="cs-name">Esther Howard</span>
-                    <span class="cs-job">Project Manager</span>
-                    <div class="cs-social-group">
-                        <a href="" class="cs-link" aria-label="visit linkedin">
-                            <img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-tax2.svg"
-                                    alt="linkedin" width="12" height="12">
-                        </a>
-                        <a href="" class="cs-link" aria-label="visit twitter">
-                            <img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-tax2.svg"
-                                    alt="twitter" width="12" height="12">
-                        </a>
-                        <a href="" class="cs-link" aria-label="visit instragram">
-                            <img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-tax2.svg"
-                                    alt="instragram" width="12" height="12">
-                        </a>
-                        <a href="" class="cs-link" aria-label="visit youtube">
-                            <img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube-tax2.svg"
-                                    alt="youtube" width="12" height="12">
-                        </a>
-                    </div>
-                </div>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-picture">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)"
-                            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/non-profit-team-two.png">
-                    <!--Tablet and above Image-->
-                    <source media="(min-width: 601px)"
-                            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/non-profit-team-two.png">
-                    <img loading="lazy" decoding="async"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/non-profit-team-two.png" alt="volunteer"
-                            width="305" height="338">
-                </picture>
-                <div class="cs-info">
-                    <span class="cs-name">Jenny Wilson</span>
-                    <span class="cs-job">Volunteer</span>
-                    <div class="cs-social-group">
-                        <a href="" class="cs-link" aria-label="visit linkedin">
-                            <img img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-tax2.svg"
-                                    alt="linkedin" width="12" height="12">
-                        </a>
-                        <a href="" class="cs-link" aria-label="visit twitter">
-                            <img img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-tax2.svg"
-                                    alt="twitter" width="12" height="12">
-                        </a>
-                        <a href="" class="cs-link" aria-label="visit instragram">
-                            <img img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-tax2.svg"
-                                    alt="instragram" width="12" height="12">
-                        </a>
-                        <a href="" class="cs-link" aria-label="visit youtube">
-                            <img img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube-tax2.svg"
-                                    alt="youtube" width="12" height="12">
-                        </a>
-                    </div>
-                </div>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-picture">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)"
-                            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/non-profit-team-three.png">
-                    <!--Tablet and above Image-->
-                    <source media="(min-width: 601px)"
-                            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/non-profit-team-three.png">
-                    <img loading="lazy" decoding="async"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/non-profit-team-three.png" alt="volunteer"
-                            width="305" height="338">
-                </picture>
-                <div class="cs-info">
-                    <span class="cs-name">Jacob Jones</span>
-                    <span class="cs-job">Volunteer</span>
-                    <div class="cs-social-group">
-                        <a href="" class="cs-link" aria-label="visit linkedin">
-                            <img img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-tax2.svg"
-                                    alt="linkedin" width="12" height="12">
-                        </a>
-                        <a href="" class="cs-link" aria-label="visit twitter">
-                            <img img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-tax2.svg"
-                                    alt="twitter" width="12" height="12">
-                        </a>
-                        <a href="" class="cs-link" aria-label="visit instragram">
-                            <img img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-tax2.svg"
-                                    alt="instragram" width="12" height="12">
-                        </a>
-                        <a href="" class="cs-link" aria-label="visit youtube">
-                            <img img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube-tax2.svg"
-                                    alt="youtube" width="12" height="12">
-                        </a>
-                    </div>
-                </div>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-picture">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)"
-                            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/non-profit-team-four.png">
-                    <!--Tablet and above Image-->
-                    <source media="(min-width: 601px)"
-                            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/non-profit-team-four.png">
-                    <img loading="lazy" decoding="async"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/non-profit-team-four.png" alt="volunteer"
-                            width="305" height="338">
-                </picture>
-                <div class="cs-info">
-                    <span class="cs-name">Leslie Alexander</span>
-                    <span class="cs-job">Volunteer</span>
-                    <div class="cs-social-group">
-                        <a href="" class="cs-link" aria-label="visit linkedin">
-                            <img img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-tax2.svg"
-                                    alt="linkedin" width="12" height="12">
-                        </a>
-                        <a href="" class="cs-link" aria-label="visit twitter">
-                            <img img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-tax2.svg"
-                                    alt="twitter" width="12" height="12">
-                        </a>
-                        <a href="" class="cs-link" aria-label="visit instragram">
-                            <img img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-tax2.svg"
-                                    alt="instragram" width="12" height="12">
-                        </a>
-                        <a href="" class="cs-link" aria-label="visit youtube">
-                            <img img class="cs-icon" loading="lazy" decoding="async"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube-tax2.svg"
-                                    alt="youtube" width="12" height="12">
-                        </a>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
-</section>
                                 
 
 
@@ -912,66 +591,6 @@ eleventyNavigation:
 
 
 
-<!-- ============================================ -->
-<!--                    Blog                      -->
-<!-- ============================================ -->
-
-<section id="blog-1654">
-    <div class="cs-container">
-        <div class="cs-content">
-            <picture class="cs-picture">
-                <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="/assets/images/blog.jpg">
-                <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset="/assets/images/blog.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/blog.jpg" alt="busines meeting" width="413" height="652" aria-hidden="true">
-            </picture>
-            <div class="cs-text-wrapper">
-                <span class="cs-topper">Our Blog</span>
-                <h2 class="cs-title">Latest News</h2>
-            </div>
-        </div>
-        <div class="cs-posts">
-            <ul class="cs-card-group">
-                <li class="cs-item">
-                    <picture class="cs-image" aria-hidden="true">
-                        <source media="(max-width: 600px)" srcset="/assets/images/blogpost1.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/blogpost1.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/blogpost1.jpg" alt="windmill" width="413" height="320">
-                    </picture>
-                    <div class="cs-flex">
-                        <span class="cs-date">29 Oct, 2023</span>
-                        <h3 class="cs-h3">Latest: Montano Plumbing & Contracting LTD is a member of Philippine Business of Society Alberta</h3>
-                        <p class="cs-item-text">
-                            Montano Plumbing & Contracting LTD is now a proud member of the Philippine Business Society of Alberta. This membership reflects our commitment to excellence and community engagement within the Filipino business network.                        </p>
-                        <a href="" class="cs-link">
-                            Get Started
-                            <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-right-arrow.svg" alt="icon" width="20" height="20" aria-hidden="true">
-                        </a>
-                    </div>
-                </li>
-                <li class="cs-item">
-                    <picture class="cs-image" aria-hidden="true">
-                        <source media="(max-width: 600px)" srcset="/assets/images/blogpost2.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/blogpost2.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/blogpost2.jpg" alt="fire hydrant" width="413" height="320">
-                    </picture>
-                    <div class="cs-flex">
-                        <span class="cs-date">8 March, 2024</span>
-                        <h3 class="cs-h3">Get a Free Humidifier with Every Furnace Installation: A Perfect Pair for Ultimate Home Comfort!</h3>
-                        <p class="cs-item-text">
-                            Upgrade your home's comfort and air quality with our special offer: receive a free humidifier with every new furnace installation! Enjoy balanced humidity and cozy warmth all year round, enhancing your living space like never before.                        </p>
-                        <a href="" class="cs-link">
-                            Get Started
-                            <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-right-arrow.svg" alt="icon" width="20" height="20" aria-hidden="true">
-                        </a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
-                                
 
 
 
