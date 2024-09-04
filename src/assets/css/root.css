@@ -997,11 +997,29 @@
   #hero-446 {
     /* Centers tag */
     text-align: center;
+    justify-content: center;
+    display: flex;
     /* 144px - 300px - leaving extra space for the navigation */
-    padding-top: 2%;
-    padding-bottom: 0;
+    height: 15vh;
     position: relative;
     z-index: 1;
+  }
+  #hero-446 .cs-button-solid1 {
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+    width: fit-content;
+    padding: 0 1.875rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 3.125em;
+    font-weight: bold;
+    color: #030000;
+    transition: color 0.3s;
+    transition-delay: 0.1s;
+    text-align: center;
   }
   #hero-446 .cs-background {
     width: 100%;
@@ -1106,7 +1124,6 @@
     background: linear-gradient(280deg, #062f6b 0%, #0a387d 50%, #1055bc 100%);
     filter: drop-shadow(0px 24px 54px rgba(87, 107, 147, 0));
     /* 12px - 24px */
-    border-radius: clamp(0.75rem, 2vw, 1.5rem) clamp(0.75rem, 2vw, 1.5rem) 0 0;
     display: flex;
     justify-content: center;
     align-items: stretch;
@@ -1118,12 +1135,12 @@
     margin: 0;
     /* 16px - 48px top and bottom */
     /* 12px - 110px top and bottom */
-    padding: clamp(1rem, 3.7vw, 3rem) clamp(0.75rem, 3vw, 6.875rem);
+    padding: var(--sectionPadding);
     /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
     border-right: 1px solid #dcdcdd;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: flex-start;
   }
@@ -1132,7 +1149,9 @@
   }
   #hero-446 .cs-item:last-of-type {
     width: 100%;
+    justify-content: center;
     border-right: none;
+    padding: 2%;
   }
   #hero-446 .cs-number {
     /* 31px - 61px */
@@ -1150,10 +1169,11 @@
     line-height: 1.2em;
     font-weight: 400;
     text-align: center;
-    max-width: 25.5rem;
+    max-width: 30rem;
     margin: 0;
     color: #fff;
     display: block;
+    padding: 2%;
   }
 }
 /* In-Between - 650px */
@@ -1168,9 +1188,10 @@
     border-right: 1px solid #dcdcdd;
   }
   #hero-446 .cs-item:last-of-type {
-    width: 50%;
+    width: 100%;
     border: none;
-    border-radius: 20px;
+    align-items: center;
+    align-content: center;
   }
 }
 /*-- -------------------------- -->

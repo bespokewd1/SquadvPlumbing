@@ -6,7 +6,7 @@ author: NICOLE SAN JOSE
 date: 2024-08-28T18:47:00.000Z
 tags:
   - post
-image: /assets/images/blog/plumbing-repair-tile.jpg
+image: /assets/images/blog/plumbingserviceshero.jpg
 imageAlt: Plumbing
 ---
 
