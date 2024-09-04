@@ -54,7 +54,7 @@
     z-index: 1;
     position: relative;
     display: inline-block;
-    background-color: var(--primary);
+    background-color: #fff;
     width: auto;
     padding: 0 1.875rem;
     text-decoration: none;
@@ -62,7 +62,7 @@
     font-size: 1rem;
     line-height: 3.125em;
     font-weight: bold;
-    color: #ffffff;
+    color: #030000;
     transition: color 0.3s;
     transition-delay: 0.1s;
     text-align: center;
@@ -279,8 +279,7 @@
   }
   body.scroll #cs-navigation .cs-top-container {
       gap: 0;
-      background: rgb(35,155,236);
-      background: linear-gradient(280deg, rgba(35,155,236,1) 0%, rgba(16,85,188,1) 50%, rgba(24,95,201,1) 100%);
+   
   }
   body.scroll #cs-navigation .cs-top-social {
       height: 0;
@@ -730,8 +729,7 @@
       justify-content: space-between;
       align-items: center;
       gap: 1.5rem;
-      background: rgb(35,155,236);
-      background: linear-gradient(280deg, rgba(35,155,236,1) 0%, rgba(16,85,188,1) 50%, rgba(24,95,201,1) 100%);
+      
   }
   #cs-navigation .cs-contact-group {
       display: flex;
@@ -1025,7 +1023,202 @@
 
 
 
+/*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
 
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #hero-446 {
+      /* Centers tag */
+      text-align: center;
+      /* 144px - 300px - leaving extra space for the navigation */
+      padding-top: 2%;
+      padding-bottom: 0;
+      position: relative;
+      z-index: 1;
+     
+  }
+  #hero-446 .cs-background {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -2;
+  }
+  #hero-446 .cs-background:before {
+      /* Overlay */
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: #1a1a1a;
+      mix-blend-mode: multiply;
+      opacity: 0.4;
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      /* prevents the cursor from interacting with it */
+      pointer-events: none;
+  }
+  #hero-446 .cs-background img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+  }
+  #hero-446 .cs-container {
+      width: 100%;
+      max-width: 80rem;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      /* 80px - 120px */
+      gap: clamp(5rem, 10vw, 7.5rem);
+  }
+  #hero-446 .cs-content {
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  #hero-446 .cs-tag {
+      /* 14px - 16px */
+      font-size: clamp(0.875rem, 1.5vw, 1rem);
+      /* 30px - 44px */
+      line-height: clamp(1.875rem, 4vw, 2.75rem);
+      text-align: center;
+      text-transform: uppercase;
+      /* 12px - 20px */
+      padding: 0 clamp(0.75rem, 1.6vw, 1.25rem);
+      /* 12px - 20px */
+      margin-bottom: clamp(0.75rem, 2vw, 1.25rem);
+      color: var(--bodyTextColorWhite);
+      border: 1px solid var(--bodyTextColorWhite);
+      background: rgba(250, 251, 252, 0.2);
+      -webkit-backdrop-filter: blur(6px);
+      backdrop-filter: blur(6px);
+      border-radius: 1.875rem;
+      /* prevents border from affecting height and width */
+      box-sizing: border-box;
+      display: inline-block;
+  }
+  #hero-446 .cs-title {
+      /* 31px - 61px */
+      font-size: clamp(1.9375rem, 6.4vw, 3.8125rem);
+      font-weight: 700;
+      line-height: 1.2em;
+      text-align: center;
+      max-width: 51.8125rem;
+      /* 16px - 24px */
+      margin: 0 auto clamp(1rem, 4vw, 1.5rem) 0;
+      color: var(--bodyTextColorWhite);
+      position: relative;
+  }
+  #hero-446 .cs-text {
+      /* 16px - 20px */
+      font-size: clamp(1rem, 1.95vw, 1.25rem);
+      line-height: 1.5em;
+      text-align: center;
+      width: 100%;
+      /* 464px - 622px */
+      max-width: clamp(29rem, 60vw, 38.785rem);
+      margin: 0;
+      color: var(--bodyTextColorWhite);
+  }
+  #hero-446 .cs-card-group {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      background: #062f6b;
+      background: linear-gradient(280deg, #062f6b 0%, #0a387d 50%, #1055bc 100%);
+      filter: drop-shadow(0px 24px 54px rgba(87, 107, 147, 0));
+      /* 12px - 24px */
+      border-radius: clamp(0.75rem, 2vw, 1.5rem) clamp(0.75rem, 2vw, 1.5rem) 0
+          0;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      flex-wrap: wrap;
+  }
+  #hero-446 .cs-item {
+      list-style: none;
+      width: 50%;
+      margin: 0;
+      /* 16px - 48px top and bottom */
+      /* 12px - 110px top and bottom */
+      padding: clamp(1rem, 3.7vw, 3rem) clamp(0.75rem, 3vw, 6.875rem);
+      /* prevents padding and border from affecting height and width */
+      box-sizing: border-box;
+      border-right: 1px solid #dcdcdd;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+  }
+  #hero-446 .cs-item:nth-of-type(2) {
+      border: none;
+  }
+  #hero-446 .cs-item:last-of-type {
+      width: 100%;
+      
+      border-right: none;
+
+      
+
+   
+  }
+  #hero-446 .cs-number {
+      /* 31px - 61px */
+      font-size: clamp(1.9375rem, 4vw, 3.8125rem);
+      line-height: 1.2em;
+      font-weight: 700;
+      text-align: center;
+      color: #fff;
+      margin: 0 0 0.25rem 0;
+      display: block;
+  }
+  #hero-446 .cs-desc {
+      /* 14px - 16px */
+      font-size: clamp(0.875rem, 1.5vw, 1rem);
+      line-height: 1.2em;
+      font-weight: 400;
+      text-align: center;
+      max-width: 25.5rem;
+      margin: 0;
+      color: #fff;
+      display: block;
+  }
+}
+/* In-Between - 650px */
+@media only screen and (min-width: 40.625rem) {
+  #hero-446 .cs-card-group {
+      flex-wrap: nowrap;
+  }
+  #hero-446 .cs-item {
+      width: 33.33%;
+  }
+  #hero-446 .cs-item:nth-of-type(2) {
+      border-right: 1px solid #dcdcdd;
+  }
+  #hero-446 .cs-item:last-of-type {
+      width: 50%;
+      border: none;
+      border-radius: 20px;
+      
+      
+  }
+}
+
+                              
 
 
 
