@@ -1265,9 +1265,11 @@ body {
 .carousel {
   position: relative;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
-  margin-top: 26px;
+  margin-top: 150px;
+  object-fit: cover;
 }
 .carousel-inner {
+  display: flex;
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -1286,7 +1288,7 @@ body {
   display: block;
   height: auto;
   max-width: 100%;
-  padding-top: 10%;
+  object-fit: cover;
 }
 .carousel-control {
   background: rgba(0, 0, 0, 0.28);

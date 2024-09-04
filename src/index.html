@@ -45,8 +45,7 @@ eleventyNavigation:
 
 
 
-                                
- 
+
 
 
 <div class="carousel">
@@ -56,18 +55,37 @@ eleventyNavigation:
         
         <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
         <div class="carousel-item">
-            <img src="/assets/images/7.png">
-            
+            <!-- <img src="/assets/images/1.png"> -->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <picture class="cs-background">
+                <source media="(max-width: 600px)" srcset="/assets/images/m1.png">
+                <source media="(min-width: 601px)" srcset="/assets/images/1.png">
+                <img decoding="async" src="/assets/images/1.png" alt="" width="2250" height="1500" aria-hidden="true">
+            </picture>
             
         </div>
       
         <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
         <div class="carousel-item">
-            <img  src="/assets/images/8.png">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         
+            <picture class="cs-background">
+                <source media="(max-width: 600px)" srcset="/assets/images/m2.png">
+                <source media="(min-width: 601px)" srcset="/assets/images/2.png">
+                <img decoding="async" src="/assets/images/2.png" alt="" width="2250" height="1500" aria-hidden="true">
+            </picture>
         </div>
         <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
         <div class="carousel-item">
-            <img src="/assets/images/9.png">
+           
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
+            <picture class="cs-background">
+                <source media="(max-width: 600px)" srcset="/assets/images/m3.png">
+                <source media="(min-width: 601px)" srcset="/assets/images/3.png">
+                <img decoding="async" src="/assets/images/3.png" alt="" width="2250" height="1500" aria-hidden="true">
+            </picture>
         </div>
         <label for="carousel-3" class="carousel-control prev control-1">‹</label>
         <label for="carousel-2" class="carousel-control next control-1">›</label>
