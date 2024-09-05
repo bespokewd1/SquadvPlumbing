@@ -1294,10 +1294,11 @@ body {
   position: relative;
   overflow: hidden;
   width: 100%;
+  touch-action: pan-y;
 }
 .carousel-open:checked + .carousel-item {
   position: static;
-  opacity: 100;
+  opacity: 1;
 }
 .carousel-item {
   position: absolute;

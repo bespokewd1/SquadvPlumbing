@@ -47,6 +47,7 @@ eleventyNavigation:
 
 
 
+<body>
 
 <div class="carousel">
     <div class="carousel-inner">
@@ -108,8 +109,64 @@ eleventyNavigation:
         </ol>
         
     </div>
-    
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const slides = document.querySelectorAll('.carousel-open'); // Select all radio inputs
+        let currentIndex = 0;
+    
+        function showNextSlide() {
+            // Uncheck current slide and check the next one
+            slides[currentIndex].checked = false;
+            currentIndex = (currentIndex + 1) % slides.length; // Cycle through the slides
+            slides[currentIndex].checked = true;
+        }
+    
+        // Set the interval to 3 seconds for the slide change
+        setInterval(showNextSlide, 3000);
+    });
+    </script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('.carousel-open');
+            let currentIndex = 0;
+            let startX;
+        
+            function showNextSlide() {
+                slides[currentIndex].checked = false;
+                currentIndex = (currentIndex + 1) % slides.length;
+                slides[currentIndex].checked = true;
+            }
+        
+            function showPreviousSlide() {
+                slides[currentIndex].checked = false;
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                slides[currentIndex].checked = true;
+            }
+        
+            // Swipe detection
+            document.querySelector('.carousel-inner').addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+            });
+        
+            document.querySelector('.carousel-inner').addEventListener('touchend', (e) => {
+                const endX = e.changedTouches[0].clientX;
+                if (startX > endX + 50) {
+                    // Swipe left
+                    showNextSlide();
+                } else if (startX < endX - 50) {
+                    // Swipe right
+                    showPreviousSlide();
+                }
+            });
+        });
+        </script>
+        
+</body>
+
+
 
 
 <section id="hero-446">
