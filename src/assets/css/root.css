@@ -3359,7 +3359,7 @@ body.dark-mode .cs-button-5:before {
   #footer {
     background: #1c1c1c;
     padding: 5.25rem 0 calc(20 / 16 * 1rem);
-    font-size: min(4vw, 1.2em);
+    font-size: min(1vw, 0.5rem);
   }
   #footer .left-section {
     margin: auto;
@@ -3382,7 +3382,7 @@ body.dark-mode .cs-button-5:before {
   #footer .left-section p {
     opacity: 0.9;
     margin: auto;
-    width: 120%;
+    width: 100%;
     font-size: 1rem;
     line-height: 1.92857143rem;
     color: #fff;
