@@ -6,7 +6,7 @@ module.exports = {
     "address": {
         "lineOne": "",
         "lineTwo": "",
-        "city": "Edmonoton, Alberta Canada",
+        "city": "Edmonton, Alberta Canada",
         "state": "",
         "zip": "",
         "mapLink": "https://maps.app.goo.gl/N5znB9zQ7S7DxkoWA"

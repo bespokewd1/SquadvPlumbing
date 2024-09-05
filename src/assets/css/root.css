@@ -3321,7 +3321,7 @@ body.dark-mode .cs-button-5:before {
     content: "";
     opacity: 0.7;
     display: block;
-    background: #000;
+    background: #0000003c;
     height: 100%;
     width: 100%;
   }
@@ -3382,8 +3382,8 @@ body.dark-mode .cs-button-5:before {
   #footer .left-section p {
     opacity: 0.9;
     margin: auto;
-    width: 100%;
-    font-size: 0.875rem;
+    width: 120%;
+    font-size: 1rem;
     line-height: 1.92857143rem;
     color: #fff;
     text-align: center;
@@ -3468,14 +3468,14 @@ body.dark-mode .cs-button-5:before {
     margin: auto;
     margin-top: 6.25rem;
     width: 96%;
-    font-size: 1rem;
+    font-size: 0.8rem;
     line-height: 2.25rem;
     color: #fff;
     text-align: center;
   }
   #footer .credit a {
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: var(--primary);
   }
   #footer .credit a:hover {
@@ -3483,7 +3483,7 @@ body.dark-mode .cs-button-5:before {
   }
   #footer .credit .copyright {
     display: block;
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 /* Small Desktop */
@@ -3508,7 +3508,7 @@ body.dark-mode .cs-button-5:before {
   }
   #footer .left-section .logo {
     margin-left: 0;
-    height: 2.5rem;
+    height: 4rem;
     text-align: left;
   }
   #footer .left-section p {

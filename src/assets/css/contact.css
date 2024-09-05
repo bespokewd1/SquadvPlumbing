@@ -681,7 +681,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
   #subscribe-1719 .cs-floater {
     /* 296px - 450px */
@@ -812,10 +812,10 @@
     transition: border-bottom 0.3s;
   }
   #faq-1236 .cs-faq-item.active {
-    background-color: #1a1a1a;
+    background-color: var(--primary);
   }
   #faq-1236 .cs-faq-item.active .cs-button {
-    color: var(--primary);
+    color: var(--bodyTextColorWhite);
   }
   #faq-1236 .cs-faq-item.active .cs-button:before {
     background-color: var(--primary);
@@ -826,7 +826,7 @@
     transform: rotate(-315deg);
   }
   #faq-1236 .cs-faq-item.active .cs-number {
-    background-color: #1a1a1a;
+    background-color: #d5d8ff;
     color: var(--primary);
   }
   #faq-1236 .cs-faq-item.active .cs-number:before {
@@ -908,7 +908,7 @@
     /* 52px - 72px */
     width: clamp(3.25rem, 6vw, 4.5rem);
     color: var(--headerColor);
-    background-color: #e8e8e8;
+    background-color: #d5d8ff;
     display: flex;
     justify-content: center;
     align-items: center;
