@@ -849,7 +849,7 @@
     padding: 0;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     z-index: 100;
   }
   #cs-navigation .cs-logo img {
