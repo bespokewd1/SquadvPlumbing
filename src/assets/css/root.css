@@ -334,6 +334,8 @@
     padding: clamp(1rem, 2.5vw, 1.25rem) 1rem;
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
+    display: -webkit-flex;
+    /* Safari 6.1+ */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -704,6 +706,8 @@
     padding: 1rem;
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
+    display: -webkit-flex;
+    /* Safari 6.1+ */
     display: flex;
     justify-content: space-between;
     align-items: center;
