@@ -1,126 +1,22 @@
 ---
-title: 'Renovation| Montano Plumbing & Contracting LTD.'
+title: 'Gallery | Montano Plumbing & Contracting LTD.'
 description: 'Your Trusted Partner for Renovations and Plumbing'
 preloadImg: '/assets/images/cabinets2.jpg'
-permalink: 'renovation/'
+permalink: 'gallery/'
 eleventyNavigation:
-    key: Renovation
-    order: 250
+    key: Gallery
+    order: 500
+---
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/services.css">
+<link rel="stylesheet" href="/assets/css/gallery.css">
 {% endblock %}
 
 {% block body %}
-<!-- ============================================ -->
-<!--                    Hero                      -->
-<!-- ============================================ -->
-
-<section id="hero-1250">
-    <div class="cs-container">
-        <div class="cs-content">
-            <h1 class="cs-title">Transform your space with our expert renovation services.</h1>
-            <p class="cs-text">
-                Our team is dedicated to delivering high-quality renovations that meet your needs and exceed your expectations.
-            </p>
-            <a href="/contact" class="cs-button-solid">Get A Quote</a>
-        </div>
-       <div></div>
-    </div>
-
-    <!-- Background Image, there's a background image in the CSS for the parallax effect you'll need to change as well if you swap out our images -->
-    <picture class="cs-background">
-        <source media="(max-width: 600px)" srcset="/assets/images/kitchenrenov.jpg">
-        <source media="(min-width: 601px)" srcset="/assets/images/kitchenrenov.jpg">
-        <img decoding="async" src="/assets/images/kitchenrenov.jpg" alt="construction" width="2250" height="1500" aria-hidden="true">
-    </picture>
-</section>
-               
-<section id="hero-446">
-    <ul class="cs-card-group">
-              <li class="cs-item">
-                  <span class="cs-number"></span>
-                  <span class="cs-desc">We offer financing on any plumbing/heating installation and home renovation
-                      projects ranging from $2,000 to $100,000.</span> <br>
-                  <a target="_blank" href="https://www.financeit.ca/s/PBTFXw" class="cs-button-solid1">AVAIL</a>
-              </li>
-             
-          </ul>
-  
-      </section>
-
-   <!-- ============================================ -->
-<!--                    Services                  -->
-<!-- ============================================ -->
-
-<section id="services-1252">
-    <div class="cs-container">
-        <div class="cs-content">
-            <div class="cs-flex-group">
-                <span class="cs-topper">Our Services</span>
-                <h2 class="cs-title">Professional Renovation Services</h2>
-            </div>
-            <p class="cs-text">
-                Expert renovation services delivering high-quality transformations for homes and businesses. From design to completion, we ensure exceptional craftsmanship and attention to detail for every project.            </p>
-        </div>
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <a  class="cs-link">
-                    <h3 class="cs-h3">Basement Development</h3>
-                    <p class="cs-item-text">
-                        Basement development to maximize space and modernize functionality                    </p>
-                </a>
-                <picture class="cs-item-background">
-                    <source media="(max-width: 600px)" srcset="/assets/images/basementdev.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/basementdev.jpg">
-                    <img decoding="async" src="/assets/images/basementdev.jpg" alt="construction" width="413" height="374" aria-hidden="true">
-                </picture>
-            </li>
-            <li class="cs-item">
-                <a  class="cs-link">
-                    <h3 class="cs-h3">Washroom Renovation</h3>
-                    <p class="cs-item-text">
-                        Washroom renovation to upgrade style, functionality, and comfort.                    </p>
-                </a>
-                <picture class="cs-item-background">
-                    <source media="(max-width: 600px)" srcset="/assets/images/washroomreno.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/washroomreno.jpg">
-                    <img decoding="async" src="/assets/images/washroomreno.jpg" alt="construction" width="413" height="374" aria-hidden="true">
-                </picture>
-            </li>
-            <li class="cs-item">
-                <a  class="cs-link">
-                    <h3 class="cs-h3">Kitchen Renovation</h3>
-                    <p class="cs-item-text">
-                        Kitchen renovation to enhance design, efficiency, and usability.                    </p>
-                </a>
-                <picture class="cs-item-background">
-                    <source media="(max-width: 600px)" srcset="/assets/images/kitchenreno.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/kitchenreno.jpg">
-                    <img decoding="async" src="/assets/images/kitchenreno.jpg" alt="construction" width="413" height="374" aria-hidden="true">
-                </picture>
-            </li>
-            <li class="cs-item">
-                <a  class="cs-link">
-                    <h3 class="cs-h3">Plumbing Rough In</h3>
-                    <p class="cs-item-text">
-                        Plumbing rough-in services to ensure precise installation and seamless connectivity for all fixtures.                    </p>
-                </a>
-                <picture class="cs-item-background">
-                    <source media="(max-width: 600px)" srcset="/assets/images/roughin.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/roughin.jpg">
-                    <img decoding="async" src="/assets/images/roughin.jpg" alt="construction" width="413" height="374" aria-hidden="true">
-                </picture>
-            </li>
-        </ul>
-    </div>
-</section>
-                                            
-
-        <!-- ============================================ -->
+           <!-- ============================================ -->
 <!--                   Gallery                    -->
 <!-- ============================================ -->
 
@@ -213,9 +109,4 @@ eleventyNavigation:
      
     </div>
 </section>
-                                          
-                
-
-    {% include 'components/cta.html' %}
-
 {% endblock %}

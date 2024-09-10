@@ -1691,6 +1691,7 @@ body {
 @media only screen and (min-width: 0rem) {
   #cta-1693 {
     padding-top: 0.8%;
+    padding-bottom: var(--sectionPadding);
     background: #239bec;
     background: linear-gradient(280deg, #239bec 0%, #1055bc 50%, #185fc9 100%);
     position: relative;
@@ -1864,6 +1865,10 @@ body {
     color: var(--bodyTextColorWhite);
     opacity: 0.9;
   }
+  #stats-1738 .cs-redirect {
+    text-decoration: none;
+    /* Removes the underline */
+  }
   #stats-1738 .cs-link {
     font-size: 1rem;
     font-weight: 700;
@@ -1886,8 +1891,8 @@ body {
     display: block;
   }
   #stats-1738 .cs-arrow {
-    width: 2.5rem;
-    height: auto;
+    width: 3.5rem;
+    height: 3rem;
     display: block;
     transition: transform 0.3s;
     position: relative;
@@ -2070,10 +2075,10 @@ body {
   }
   #hero-408 .cs-stat-group {
     width: 100%;
-    border-radius: 1.25rem 0 0 1.25rem;
+    border-radius: 1.25rem 1.25rem 1.25rem 1.25rem;
     aspect-ratio: 0.92696629;
     /* clips the corners around the border radius */
-    overflow: hidden;
+    overflow: visible;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -2121,16 +2126,18 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    position: absolute;
+    position: relative;
+    left: 20px;
     z-index: -1;
   }
   #hero-408 .cs-background img {
-    position: absolute;
+    position: relative;
     top: 0;
-    left: 0;
+    left: -28px;
     height: 100%;
     width: 100%;
     object-fit: cover;
+    border-radius: 12px;
   }
 }
 /* Tablet - 768px */
@@ -3302,7 +3309,6 @@ body.dark-mode .cs-button-5:before {
 @media only screen and (min-width: 1300px) {
   #cta {
     position: relative;
-    margin-top: 6.25rem;
   }
   #cta .container {
     margin: auto;

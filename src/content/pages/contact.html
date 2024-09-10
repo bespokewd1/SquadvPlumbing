@@ -2,7 +2,7 @@
 title: 'Contact | Montano Plumbing & Contracting LTD.'
 description: 'Your Trusted Partner for Renovations and Plumbing'
 preloadImg: '/assets/images/cabinets2.jpg'
-permalink: 'contact/'
+permalink: 'contact-us/'
 eleventyNavigation:
     key: Contact Us
     order: 400
@@ -48,28 +48,32 @@ eleventyNavigation:
     <div class="cs-container">
         <div class="cs-form-group">
             <div class="cs-content">
+               
                 <span class="cs-topper"></span>
                 <h2 class="cs-title">CONTACT US</h2>
             </div>
             <!--Form-->
-            <form class="cs-form" id="cs-form-1750" name="Contact Form" method="post">
+            <form class="cs-form" id="cs-form-1750" name="Contact Form" action="https://api.web3forms.com/submit" method="post">
+                <input type="hidden" name="access_key" value="5736434b-6f9b-4f05-bc88-34ad6b279b0f">
+                
+                
                 <label class="cs-label">
-                    Name *
-                    <input class="cs-input" required type="text" id="name-1750" name="name" placeholder="John Doe">
+                    Name
+                    <input class="cs-input" required type="text" id="name-1750" name="name" placeholder="Name">
                 </label>
                 <label class="cs-label cs-email">
-                    Email *
+                    Email
                     <input class="cs-input" required type="email" id="email-1750" name="email" placeholder="name@company.com">
                 </label>
                 <label class="cs-label cs-phone">
-                    Phone *
+                    Phone
                     <input class="cs-input" required type="phone" id="phone-1750" name="phone" placeholder="+1 (206) 987-6543">
                 </label>
                 <label class="cs-label">
-                    Message *
+                    Message
                     <textarea class="cs-input cs-textarea" required name="Message" id="message-1750" placeholder="Hello, I am interested..."></textarea>
                 </label>
-                <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
+                <button class="cs-button-solid cs-submit" type="submit">Submit</button>
             </form>
         </div>
         <!--Contact Info-->
@@ -107,6 +111,8 @@ eleventyNavigation:
     </div>
 
 </section>
+
+
                                
 
 <!-- ============================================ -->
@@ -116,10 +122,10 @@ eleventyNavigation:
 <section id="subscribe-1719">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">    WE ARE HIRING!</span>
-            <h2 class="cs-title"></h2>
-            <p class="cs-text">
-                We are a growing business looking for skilled tradesperson. If you have the drive for success and passion in construction, click the link.            </p>
+            <span class="cs-topper">    </span>
+            <h2 class="cs-title">WE ARE HIRING!</h2>
+            <h3 class="cs-text">
+                We are a growing business looking for skilled tradesperson. If you have the drive for success and passion in construction, click the link.            </h3>
            
               <a href="mailto:maria@montanoplumbing.ca">  <button class="cs-button-solid cs-submit" href=mailto:maria@montanoplumbing.ca type="submit">     Submit Resume</button></a>
                
@@ -179,7 +185,24 @@ eleventyNavigation:
                 <p class="cs-item-p">
                     In a plumbing emergency, shut off the water supply to prevent further damage and contact us immediately. Our team is ready to respond and provide fast, reliable emergency plumbing services.                </p>
             </li>
-            
+            <li class="cs-faq-item">
+                <button class="cs-button">
+                    <span class="cs-number">4</span>
+                    <span class="cs-button-text">
+                        Do you offer Financing?                     </span>
+                </button>
+                <p class="cs-item-p">
+                    Yes, we offer financing for plumbing, heating installations, and home renovation projects. Financing options are available for projects ranging from $2,000 to $100,000, allowing you to complete your home improvement with flexible payment plans. Contact us to learn more about our financing terms and options.</p>
+            </li>
+            <li class="cs-faq-item">
+                <button class="cs-button">
+                    <span class="cs-number">5</span>
+                    <span class="cs-button-text">
+                        What kind of house renovations do you do?                     </span>
+                </button>
+                <p class="cs-item-p">
+                    We specialize in a range of home renovations, including: Basement Development, Washroom Renovations, Kitchen Renovations, Plumbing Rough-In</p>
+            </li>
            
         </ul>
     </div>
