@@ -848,7 +848,7 @@
     margin: 0 auto 0 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     z-index: 100;
   }
