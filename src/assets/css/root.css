@@ -2065,7 +2065,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
   #hero-408 .cs-logo {
     width: auto;
