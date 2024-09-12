@@ -11,7 +11,7 @@ imageAlt: Bathroom Renovation
 ---
 Summer is the perfect time to tackle home renovation projects, whether you're looking to sell soon or simply want to enhance your living space. The warm weather makes it easier to work on both indoor and outdoor projects, and certain updates can significantly increase your home’s value. In this blog, we’ll explore the top renovation projects you can undertake this summer to get the best return on your investment.
 
-![](/assets/images/blog/20-driveway-landscaping-ideas-that-will-make-your-home-pop.jpeg)
+![](/assets/images/blog/1.jpg)
 
 **Refresh Your Curb Appeal:**
 
