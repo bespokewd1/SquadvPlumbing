@@ -1,6 +1,6 @@
 module.exports = {
     "name": "Montano Plumbing & Contracting LTD.",
-    "email": "maria@montanoplumbing.ca",
+    "email": "info@montanoplumbing.ca",
     "phoneForTel": "",
     "phoneFormatted": "780-708-5345",
     "address": {
