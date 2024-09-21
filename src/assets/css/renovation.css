@@ -271,7 +271,7 @@
 /* Large Desktop Parallax Effect - 100px */
 @media only screen and (min-width: 100rem) {
   #hero-1250 .cs-background {
-    background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/construction.jpg");
+    background: url("/assets/images/kitchenrenov.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
