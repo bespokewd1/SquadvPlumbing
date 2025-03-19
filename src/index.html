@@ -15,6 +15,10 @@ eleventyNavigation:
     <link rel="stylesheet" href="/assets/css/local.css"/>
     <link rel="stylesheet" href="/assets/css/critical.css"/>
 
+        <meta property="og:url" content="{{ client.domain }}{{ page.url }}"/>
+        <meta property="og:image" content="{{ site.url }}/assets/images/ogmontano.png"/>
+        <meta property="og:image:secure_url" content="{{ site.url }}/assets/images/ogmontano.png"/>
+
     <!-- Script for Netlify Identity -->
     <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script defer>
