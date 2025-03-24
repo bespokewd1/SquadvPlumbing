@@ -6,7 +6,7 @@ author: Montano Plumbing and Contracting LTD.
 date: 2024-08-28T18:47:00.000Z
 tags:
   - featured
-image: /assets/images/blog/plumbingserviceshero.jpg
+image: /assets/images/blog/plumbingserviceshero.webp
 imageAlt: Plumbing
 ---
 Summer is the perfect time to relax and enjoy the warm weather, but it’s also a crucial season for home maintenance—especially when it comes to your plumbing. High temperatures and increased water usage can put a strain on your plumbing system. Here are some essential plumbing maintenance tips to keep your home’s system running smoothly all summer long.
