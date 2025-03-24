@@ -1976,7 +1976,7 @@ body {
     color: #fff;
     min-width: 9.375rem;
     padding: 0 1.5rem;
-    background-color: #F41E1E;
+    background-color: var(--primary);
     border-radius: 0.25rem;
     display: inline-block;
     position: relative;
@@ -3453,12 +3453,11 @@ body.dark-mode .cs-button-5:before {
     text-align: center;
   }
   #footer .credit a {
-    text-decoration: none;
-    font-size: 0.8rem;
-    color: var(--primary);
+    text-decoration: underline;
+    font-size: 0.80rem;
   }
   #footer .credit a:hover {
-    text-decoration: underline;
+    color: var(--primary);
   }
   #footer .credit .copyright {
     display: block;
