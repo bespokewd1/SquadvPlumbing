@@ -3454,6 +3454,7 @@ body.dark-mode .cs-button-5:before {
   }
   #footer .credit a {
     text-decoration: underline;
+    color: #fff;
     font-size: 0.80rem;
   }
   #footer .credit a:hover {
