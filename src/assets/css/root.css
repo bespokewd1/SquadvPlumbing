@@ -5,7 +5,7 @@
 /* CodeStitch Root and Helpers */
 @media only screen and (min-width: 0rem) {
   :root {
-    --primary: #3952A2;
+    --primary: #3952a2;
     --primaryLight: #ffd675;
     --secondary: #001f3f;
     --secondaryLight: #001f3f;
@@ -609,7 +609,7 @@
   #cs-navigation .cs-call .cs-wrapper {
     width: 3.5rem;
     height: 3.5rem;
-    background-color: #CEDFF0;
+    background-color: #cedff0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -743,7 +743,7 @@
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #CEDFF0;
+    background-color: #cedff0;
     opacity: 1;
     position: absolute;
     display: block;
@@ -1276,6 +1276,8 @@ body {
 }
 .carousel-inner {
   display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -1891,7 +1893,7 @@ body {
     z-index: 1;
   }
   body.dark-mode #stats-1738 .cs-item:nth-of-type(2):before {
-    content: '';
+    content: "";
     width: 100%;
     height: 100%;
     background: var(--dark);
@@ -2418,7 +2420,7 @@ body {
     height: auto;
     /* 40px - 56px, same growth rate as the cs-image */
     /* 24px - 36px marign left, same value as the padding on cs-item-text */
-    margin: calc(clamp(2.5rem, 5vw, 3.5rem)*-1) 0 2.25rem clamp(1.25rem, 3vw, 2.25rem);
+    margin: calc(clamp(2.5rem, 5vw, 3.5rem) * -1) 0 2.25rem clamp(1.25rem, 3vw, 2.25rem);
     border-radius: 50%;
     display: block;
   }
@@ -3455,7 +3457,7 @@ body.dark-mode .cs-button-5:before {
   #footer .credit a {
     text-decoration: underline;
     color: #fff;
-    font-size: 0.80rem;
+    font-size: 0.8rem;
   }
   #footer .credit a:hover {
     color: var(--primary);
