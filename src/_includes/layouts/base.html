@@ -61,8 +61,29 @@
     {% endif %}
 
     <!-- Sitewide Stylesheets and Scripts -->
-    <link rel="stylesheet" href="/assets/css/root.css" />
-    <link rel="stylesheet" href="/assets/css/dark.css" />
+    <!-- Preload the stylesheet -->
+    <link
+      rel="preload"
+      href="/css/root.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+
+    <!-- Fallback for browsers that don't support preload or have JS disabled -->
+    <noscript><link rel="stylesheet" href="/css/root.css" /></noscript>
+
+    <!-- Sitewide Stylesheets and Scripts -->
+    <!-- Preload the stylesheet -->
+    <link
+      rel="preload"
+      href="/css/dark.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+
+    <!-- Fallback for browsers that don't support preload or have JS disabled -->
+    <noscript><link rel="stylesheet" href="/css/dark.css" /></noscript>
+
     <script defer src="/assets/js/dark.js"></script>
     <script defer src="/assets/js/nav.js"></script>
 
@@ -81,4 +102,3 @@
     {% include "components/footer.html" %}
   </body>
 </html>
-
