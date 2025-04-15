@@ -181,10 +181,11 @@
   align-items: center;
   position: absolute;
   bottom: 0;
+  background-color: var(--primaryLight);
   /* Using clamp to create fluid values based on viewport width */
   --scroller-gap: clamp(1.5rem, calc(1rem + 2vw), 4rem);
   /* --scroller-max-width: clamp(250px, calc(250px + 30vw), 800px); */
-  --scroller-max-width: 676px;
+  --scroller-max-width: 700px;
   /*animation starts here */
 }
 #autoscroll-gallery .cs-content {
@@ -212,9 +213,11 @@
   /* height: 100%; */
   max-width: 30px;
   aspect-ratio: 1/1;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.3));
 }
 #autoscroll-gallery .gallery-wrapper li .cs-text {
   margin-bottom: 0;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 3px 2px rgba(0, 0, 0, 0.3), 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 #autoscroll-gallery .scroller .scroller-inner {
   display: flex;

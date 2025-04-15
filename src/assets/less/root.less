@@ -345,6 +345,11 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    max-height: 80px;
+  }
+
+  #cs-navigation .cs-bottom-bar {
+    max-height: 72px;
   }
   #cs-navigation .cs-top-container {
     width: 100%;
@@ -379,7 +384,8 @@
   #cs-navigation .cs-container {
     width: 100%;
     /* 16px - 20px */
-    padding: clamp(1rem, 2.5vw, 1.25rem) 1rem;
+    // padding: clamp(1rem, 2.5vw, 1.25rem) 1rem;
+    padding: clamp(0.3rem, 2.5vw, 0.5rem) 1rem;
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
     background-color: #ffffff;
@@ -422,6 +428,10 @@
     justify-content: center;
     align-items: center;
     transition: transform 0.6s;
+  }
+
+  #cs-navigation .cs-nav > .cs-toggle {
+    display: none;
   }
   #cs-navigation .cs-toggle.cs-active {
     transform: rotate(180deg);
@@ -691,10 +701,27 @@
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #cs-navigation .cs-button-solid {
-    display: block;
+  #cs-navigation {
+    .cs-button-solid {
+      display: block;
+    }
+
+    .cs-top-container {
+      .cs-contact-group {
+        .cs-toggle {
+          display: none;
+        }
+      }
+    }
+
+    .cs-nav {
+      & > .cs-toggle {
+        display: flex;
+      }
+    }
   }
 }
+
 /* Dark Mode */
 @media only screen and (max-width: 63.9375rem) {
   body.dark-mode #cs-navigation {
@@ -1552,6 +1579,7 @@ body {
   overflow: hidden;
   width: 100%;
   touch-action: pan-y;
+  padding-top: 55px;
 }
 
 .carousel-open:checked + .carousel-item {
@@ -3959,68 +3987,5 @@ body.dark-mode .cs-button-5:before {
 @media only screen and (min-width: 0rem) {
   body.dark-mode #footer {
     background: #061623;
-  }
-}
-
-/*-- -------------------------- -->
-<---       Canada Banner        -->
-<--- -------------------------- -*/
-
-@media only screen and (min-width: 0rem) {
-  .canada-banner {
-    position: absolute;
-    top: var(--canadaBannerHeight);
-    z-index: 2;
-    width: 100%;
-    display: grid;
-    place-items: center;
-    background: var(--canada-banner-bg);
-    padding: (12/16rem);
-
-    .cs-container {
-      grid-area: 1/1;
-      display: -webkit-flex;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: (8/16rem);
-      font-weight: 600;
-
-      img {
-        width: 15%;
-        height: auto;
-        place-self: end;
-      }
-
-      .cs-text {
-        color: var(--bodyTextColorWhite);
-        width: fit-content;
-      }
-    }
-  }
-}
-
-// tablet view
-@media only screen and (min-width: 35rem) {
-  .canada-banner {
-    .cs-container {
-      img {
-        width: 7%;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: 64rem) {
-  // :root {
-  // }
-  .canada-banner {
-    --canadaBannerHeight: 5.6rem;
-    padding-top: (22/16rem);
-    .cs-container {
-      img {
-        width: 5%;
-      }
-    }
   }
 }

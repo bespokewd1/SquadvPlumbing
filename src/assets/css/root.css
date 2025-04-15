@@ -323,6 +323,10 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    max-height: 80px;
+  }
+  #cs-navigation .cs-bottom-bar {
+    max-height: 72px;
   }
   #cs-navigation .cs-top-container {
     width: 100%;
@@ -352,7 +356,7 @@
   #cs-navigation .cs-container {
     width: 100%;
     /* 16px - 20px */
-    padding: clamp(1rem, 2.5vw, 1.25rem) 1rem;
+    padding: clamp(0.3rem, 2.5vw, 0.5rem) 1rem;
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
     background-color: #ffffff;
@@ -395,6 +399,9 @@
     justify-content: center;
     align-items: center;
     transition: transform 0.6s;
+  }
+  #cs-navigation .cs-nav > .cs-toggle {
+    display: none;
   }
   #cs-navigation .cs-toggle.cs-active {
     transform: rotate(180deg);
@@ -651,6 +658,12 @@
 @media only screen and (min-width: 48rem) {
   #cs-navigation .cs-button-solid {
     display: block;
+  }
+  #cs-navigation .cs-top-container .cs-contact-group .cs-toggle {
+    display: none;
+  }
+  #cs-navigation .cs-nav > .cs-toggle {
+    display: flex;
   }
 }
 /* Dark Mode */
@@ -1284,6 +1297,7 @@ body {
   overflow: hidden;
   width: 100%;
   touch-action: pan-y;
+  padding-top: 55px;
 }
 .carousel-open:checked + .carousel-item {
   position: static;
@@ -3543,52 +3557,5 @@ body.dark-mode .cs-button-5:before {
 @media only screen and (min-width: 0rem) {
   body.dark-mode #footer {
     background: #061623;
-  }
-}
-/*-- -------------------------- -->
-<---       Canada Banner        -->
-<--- -------------------------- -*/
-@media only screen and (min-width: 0rem) {
-  .canada-banner {
-    position: absolute;
-    top: var(--canadaBannerHeight);
-    z-index: 2;
-    width: 100%;
-    display: grid;
-    place-items: center;
-    background: var(--canada-banner-bg);
-    padding: 0.75rem;
-  }
-  .canada-banner .cs-container {
-    grid-area: 1/1;
-    display: -webkit-flex;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: 600;
-  }
-  .canada-banner .cs-container img {
-    width: 15%;
-    height: auto;
-    place-self: end;
-  }
-  .canada-banner .cs-container .cs-text {
-    color: var(--bodyTextColorWhite);
-    width: fit-content;
-  }
-}
-@media only screen and (min-width: 35rem) {
-  .canada-banner .cs-container img {
-    width: 7%;
-  }
-}
-@media only screen and (min-width: 64rem) {
-  .canada-banner {
-    --canadaBannerHeight: 5.6rem;
-    padding-top: 1.375rem;
-  }
-  .canada-banner .cs-container img {
-    width: 5%;
   }
 }
