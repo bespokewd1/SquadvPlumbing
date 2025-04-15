@@ -20,7 +20,7 @@
     /* 60px - 100px top and bottom */
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
     --canadaBannerHeight: 6.5rem;
-    --canada-banner-bg: #d76d2a;
+    --canada-banner-bg: #28a745;
   }
   .cs-topper {
     display: block;
