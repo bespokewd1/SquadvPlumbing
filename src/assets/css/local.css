@@ -4,7 +4,7 @@
 <--- -------------------------- -*/
 @media only screen and (min-width: 0rem) {
   .canada-banner {
-    --canadaBannerHeight: (152/16rem);
+    --canadaBannerHeight: 80px;
     position: absolute;
     top: var(--canadaBannerHeight);
     z-index: 2;
@@ -58,6 +58,11 @@
 @media only screen and (min-width: 35rem) {
   .canada-banner .cs-container img {
     width: 7%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 63.99rem) {
+  .canada-banner {
+    --canadaBannerHeight: 152px;
   }
 }
 @media only screen and (min-width: 64rem) {

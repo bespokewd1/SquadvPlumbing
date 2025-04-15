@@ -654,6 +654,11 @@
     display: block;
   }
 }
+@media only screen and (max-width: 767px) {
+  #cs-navigation .cs-bottom-bar {
+    display: none;
+  }
+}
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
   #cs-navigation .cs-button-solid {
@@ -1376,6 +1381,14 @@ body {
 #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
 #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
   color: #428bca;
+}
+@media only screen and (max-width: 768px) {
+  .carousel {
+    margin-top: 135px;
+  }
+  .carousel .carousel-inner {
+    padding-top: 0;
+  }
 }
 @media only screen and (min-width: 0rem) {
   #hero-1957 {
