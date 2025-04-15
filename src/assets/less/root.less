@@ -21,7 +21,6 @@
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
 
     --canadaBannerHeight: 6.5rem;
-    // --canada-banner-bg: #d76d2a;
     --canada-banner-bg: #28a745;
   }
   .cs-topper {
@@ -703,7 +702,16 @@
 
 @media only screen and (max-width: 767px) {
   #cs-navigation .cs-bottom-bar {
-    display: none;
+    .cs-container {
+      padding: 0;
+    }
+
+    .cs-toggle {
+      display: none;
+    }
+    .cs-call {
+      display: none;
+    }
   }
 }
 
@@ -3796,120 +3804,139 @@ body.dark-mode .cs-button-5:before {
     display: none;
   }
 }
+
 /*-- -------------------------- -->
 <---           Footer           -->
 <--- -------------------------- -*/
-/* Mobile */
-@media only screen and (min-width: 0rem) {
-  #footer {
-    background: #1c1c1c;
-    padding: 5.25rem 0 calc(20 / 16 * 1rem);
-    font-size: min(1vw, 0.5rem);
-  }
-  #footer .left-section {
+
+#footer {
+  /* Base styles applied first (equivalent to min-width: 0rem) */
+  background: #1c1c1c;
+  padding: 5.25rem 0 calc(20 / 16 * 1rem);
+  font-size: min(1vw, 0.5rem);
+
+  .left-section {
     margin: auto;
     margin-bottom: 3.125rem;
     text-align: center;
+
+    .logo {
+      display: inline-block;
+      margin: auto;
+      margin-bottom: 1.875em;
+      height: 2em;
+      width: auto;
+      text-align: center;
+
+      img {
+        display: block;
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    p {
+      opacity: 0.9;
+      margin: auto;
+      width: 100%;
+      font-size: 1rem;
+      line-height: 1.92857143rem;
+      color: #fff;
+      text-align: center;
+    }
   }
-  #footer .left-section .logo {
-    display: inline-block;
-    margin: auto;
-    margin-bottom: 1.875em;
-    height: 2em;
-    width: auto;
-    text-align: center;
-  }
-  #footer .left-section .logo img {
-    display: block;
-    height: 100%;
-    width: auto;
-  }
-  #footer .left-section p {
-    opacity: 0.9;
-    margin: auto;
-    width: 100%;
-    font-size: 1rem;
-    line-height: 1.92857143rem;
-    color: #fff;
-    text-align: center;
-  }
-  #footer .right-section {
+
+  .right-section {
     margin: auto;
     max-width: 25.4375rem;
     width: 96%;
+
+    .lists {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: auto;
+      max-width: 19.1875rem;
+      width: 96%;
+
+      ul {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+
+        li {
+          opacity: 0.9;
+          margin-bottom: 0.75rem;
+          list-style: none;
+          font-size: 1rem;
+          color: #fff;
+
+          a {
+            text-decoration: none;
+            line-height: 1.16666667em;
+            color: #fff;
+            transition: color 0.3s;
+
+            &:hover {
+              color: var(--primary);
+            }
+          }
+        }
+
+        h2 {
+          position: relative;
+          margin-bottom: 2.3125rem;
+          text-transform: uppercase;
+          font-size: 1rem;
+          line-height: 1.16666667em;
+          font-weight: bold;
+          color: #fff;
+
+          &:before {
+            position: absolute;
+            bottom: calc(-16 / 16 * 1rem);
+            left: 0;
+            content: "";
+            opacity: 1;
+            display: block;
+            background: var(--primary);
+            height: 0.125rem;
+            width: 6.0625rem;
+          }
+        }
+
+        // Specific styling for the third ul
+        &:nth-of-type(3) {
+          margin-top: 3.125rem;
+
+          li {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 1rem;
+
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+    }
+
+    .cs-button-solid {
+      margin: 0;
+      height: 3.3125rem;
+      width: 15.625rem;
+      padding-top: 0.1875rem;
+    }
   }
-  #footer .right-section .lists {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: auto;
-    max-width: 19.1875rem;
-    width: 96%;
-  }
-  #footer .right-section .lists ul {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0;
-  }
-  #footer .right-section .lists ul li {
-    opacity: 0.9;
-    margin-bottom: 0.75rem;
-    list-style: none;
-    font-size: 1rem;
-    color: #fff;
-  }
-  #footer .right-section .lists ul li a {
-    text-decoration: none;
-    line-height: 1.16666667em;
-    color: #fff;
-    transition: color 0.3s;
-  }
-  #footer .right-section .lists ul li a:hover {
-    color: var(--primary);
-  }
-  #footer .right-section .lists ul h2 {
-    position: relative;
-    margin-bottom: 2.3125rem;
-    text-transform: uppercase;
-    font-size: 1rem;
-    line-height: 1.16666667em;
-    font-weight: bold;
-    color: #fff;
-  }
-  #footer .right-section .lists ul h2:before {
-    position: absolute;
-    bottom: calc(-16 / 16 * 1rem);
-    left: 0;
-    content: "";
-    opacity: 1;
-    display: block;
-    background: var(--primary);
-    height: 0.125rem;
-    width: 6.0625rem;
-  }
-  #footer .right-section .lists ul:nth-of-type(3) {
-    margin-top: 3.125rem;
-  }
-  #footer .right-section .lists ul:nth-of-type(3) li {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-  #footer .right-section .lists ul:nth-of-type(3) li:last-of-type {
-    margin-bottom: 0;
-  }
-  #footer .right-section .buttons {
-    display: flex;
-    justify-content: center;
-  }
-  #footer .right-section .cs-button-solid {
-    margin: 0;
-    height: 3.3125rem;
-    width: 15.625rem;
-    padding-top: 0.1875rem;
-  }
-  #footer .credit {
+
+  .credit {
     margin: auto;
     margin-top: 6.25rem;
     width: 96%;
@@ -3917,93 +3944,123 @@ body.dark-mode .cs-button-5:before {
     line-height: 2.25rem;
     color: #fff;
     text-align: center;
+
+    a {
+      text-decoration: underline;
+      color: #fff;
+      font-size: 0.8rem;
+
+      &:hover {
+        color: var(--primary);
+      }
+    }
+
+    .copyright {
+      display: block;
+      font-size: 0.8rem;
+    }
   }
-  #footer .credit a {
-    text-decoration: underline;
-    color: #fff;
-    font-size: 0.8rem;
-  }
-  #footer .credit a:hover {
-    color: var(--primary);
-  }
-  #footer .credit .copyright {
-    display: block;
-    font-size: 0.8rem;
-  }
-}
-/* Small Desktop */
-@media only screen and (min-width: 64rem) {
-  #footer {
+
+  /* Small Desktop */
+  @media only screen and (min-width: 64rem) {
     font-size: min(1.2vw, 1em);
-  }
-  #footer .container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    margin: auto;
-    max-width: 82.5rem;
-    width: 96%;
-    padding: 0;
-  }
-  #footer .left-section {
-    margin: 0;
-    width: 25.5625rem;
-    text-align: left;
-  }
-  #footer .left-section .logo {
-    margin-left: 0;
-    height: 4rem;
-    text-align: left;
-  }
-  #footer .left-section p {
-    margin-left: 0;
-    text-align: left;
-  }
-  #footer .right-section {
-    margin: 0;
-    max-width: none;
-    width: 38.0625rem;
-  }
-  #footer .right-section .lists {
-    margin: 0;
-    max-width: 48.0625rem;
-    width: 96%;
-  }
-  #footer .right-section .lists ul li a {
-    position: relative;
-  }
-  #footer .right-section .lists ul li a:before {
-    position: absolute;
-    bottom: calc(-3 / 16 * 1rem);
-    left: 0;
-    content: "";
-    opacity: 1;
-    display: block;
-    background: var(--primary);
-    height: 0.125rem;
-    width: 0%;
-    transition: width 0.3s;
-  }
-  #footer .right-section .lists ul li a:hover:before {
-    width: 100%;
-  }
-  #footer .right-section .lists ul:nth-of-type(3) {
-    margin-top: 0;
-  }
-  #footer .right-section .lists ul:nth-of-type(3) li:first-of-type {
-    margin-bottom: 0;
-  }
-  #footer .right-section .buttons {
-    justify-content: flex-start;
-  }
-  #footer .credit .copyright {
-    display: inline-block;
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      margin: auto;
+      max-width: 82.5rem;
+      width: 96%;
+      padding: 0;
+    }
+
+    .left-section {
+      margin: 0;
+      width: 25.5625rem;
+      text-align: left;
+
+      .logo {
+        margin-left: 0;
+        height: 4rem;
+        text-align: left;
+      }
+
+      p {
+        margin-left: 0;
+        text-align: left;
+      }
+    }
+
+    .right-section {
+      margin: 0;
+      max-width: none;
+      width: 38.0625rem;
+
+      .lists {
+        margin: 0;
+        max-width: 48.0625rem;
+        width: 96%;
+
+        ul {
+          li {
+            a {
+              position: relative;
+
+              &:before {
+                position: absolute;
+                bottom: calc(-3 / 16 * 1rem);
+                left: 0;
+                content: "";
+                opacity: 1;
+                display: block;
+                background: var(--primary);
+                height: 0.125rem;
+                width: 0%;
+                transition: width 0.3s;
+              }
+
+              &:hover:before {
+                width: 100%;
+              }
+            }
+          }
+
+          &:nth-of-type(3) {
+            margin-top: 0;
+
+            li {
+              // Note: The original CSS had li:first-of-type { margin-bottom: 0; }
+              // but the base style for li already has margin-bottom.
+              // This rule might be redundant or intended to override something else.
+              // Keeping it for precision.
+              &:first-of-type {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+
+      .buttons {
+        justify-content: flex-start;
+      }
+    }
+
+    .credit {
+      .copyright {
+        display: inline-block;
+      }
+    }
   }
 }
-/* Dark Mode */
+
+/* Dark Mode - Kept separate as it modifies a parent element */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode #footer {
-    background: #061623;
+  body.dark-mode {
+    #footer {
+      background: #061623;
+    }
   }
 }

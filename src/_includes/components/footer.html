@@ -3,78 +3,101 @@
 <!-- ============================================ -->
 
 <footer id="footer">
-    <div class="container">
-        <div class="left-section">
-            <a class="logo" href="/"><img loading="lazy" decoding="async" src="/assets/images/montanologo.png" alt="logo" width="264" height="78"></a>
-            <p>
-                Exceptional renovation and plumbing services you can trust.
-            </p>
-        </div>
-        <div class="right-section">
-            <div class="lists">
-                <ul>
-                    <li>
-                        <h2>SITEMAP</h2>
-                    </li>
-                    <li>
-                        <a href="/index">Home</a>
-                    </li>
-                    <li>
-                        <a href="/plumbing-and-heating">Plumbing & Heating</a>
-                    </li>
-                    <li>
-                        <a href="/renovation">Renovation</a>
-                    </li>
-                    <li>
-                        <a href="/blog">Blog</a>
-                    </li>
-                    <li>
-                        <a href="/contact">Contact Us</a>
-                    </li>
-                    <li>
-                        <a href="/gallery">Gallery</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <h2>Services</h2>
-                    </li>
-                    <li>Plumbing</li>
-                    <li>Gasfitting</li>
-                    <li>Renovation</li>
-                    
-                </ul>
-                <ul>
-                    <li>
-                        <h2>Contact</h2>
-                    </li>
-                    <li>
-                        <a href="/contact">
-                            {{client.address.city}}
-                            {{client.address.state}}
-                            {{client.address.zip}}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tel:{{client.phoneForTel}}">
-                            Contact Number:
-                            {{client.phoneFormatted}}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:{{client.email}}">Email: info@montanoplumbing.ca</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+  <div class="container">
+    <div class="left-section">
+      <a class="logo" href="/"
+        ><img
+          loading="lazy"
+          decoding="async"
+          src="/assets/images/montanologo.png"
+          alt="logo"
+          width="264"
+          height="78"
+      /></a>
+      <p>Exceptional renovation and plumbing services you can trust.</p>
+      <div>
+        <p>Get Pre-Approved in Seconds! Click here</p>
+        <a
+          href="https://www.financeit.ca/en/direct/payment-plan/YT0yNzEzNTcmbD0mcD1QemIwb1duaDZNemhEa3hkSTQ5Z1R3JnM9MCZ2PTE=/apply?slug=PBTFXw"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            class="cs-img"
+            decoding="async"
+            src="/assets/images/finance-it.avif"
+            width="100"
+            height="50"
+          />
+        </a>
+      </div>
     </div>
+    <div class="right-section">
+      <div class="lists">
+        <ul>
+          <li>
+            <h2>SITEMAP</h2>
+          </li>
+          <li>
+            <a href="/index">Home</a>
+          </li>
+          <li>
+            <a href="/plumbing-and-heating">Plumbing & Heating</a>
+          </li>
+          <li>
+            <a href="/renovation">Renovation</a>
+          </li>
+          <li>
+            <a href="/blog">Blog</a>
+          </li>
+          <li>
+            <a href="/contact">Contact Us</a>
+          </li>
+          <li>
+            <a href="/gallery">Gallery</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <h2>Services</h2>
+          </li>
+          <li>Plumbing</li>
+          <li>Gasfitting</li>
+          <li>Renovation</li>
+        </ul>
+        <ul>
+          <li>
+            <h2>Contact</h2>
+          </li>
+          <li>
+            <a href="/contact">
+              {{client.address.city}} {{client.address.state}}
+              {{client.address.zip}}
+            </a>
+          </li>
+          <li>
+            <a href="tel:{{client.phoneForTel}}">
+              Contact Number: {{client.phoneFormatted}}
+            </a>
+          </li>
+          <li>
+            <a href="mailto:{{client.email}}">Email: info@montanoplumbing.ca</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-    <div class="credit">
-        <span>Designed and Hand Coded by</span>
-        <a href="https://bespokewebdesign.ca/" target="_blank" rel="noopener">Bespoke Web Design</a>
-        <span class="copyright">
-            Copyright {% year %} - Present</span> |
-            <a href="/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a> |
-            <a href="/terms-of-service" target="_blank" rel="noopener">Terms of Service</a>
-    </div>
+  <div class="credit">
+    <span>Designed and Hand Coded by</span>
+    <a href="https://bespokewebdesign.ca/" target="_blank" rel="noopener"
+      >Bespoke Web Design</a
+    >
+    <span class="copyright"> Copyright {% year %} - Present</span> |
+    <a href="/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
+    |
+    <a href="/terms-of-service" target="_blank" rel="noopener"
+      >Terms of Service</a
+    >
+  </div>
 </footer>
