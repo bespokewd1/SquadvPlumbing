@@ -3379,8 +3379,12 @@ body.dark-mode .cs-button-5:before {
 }
 #footer .left-section {
   margin: auto;
-  margin-bottom: 3.125rem;
+  margin-bottom: 2.125rem;
   text-align: center;
+  display: grid;
+  grid-template-areas: "logo cta" "text text";
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0.3rem;
 }
 #footer .left-section .logo {
   display: inline-block;
@@ -3389,13 +3393,14 @@ body.dark-mode .cs-button-5:before {
   height: 2em;
   width: auto;
   text-align: center;
+  grid-area: logo;
 }
 #footer .left-section .logo img {
   display: block;
   height: 100%;
   width: auto;
 }
-#footer .left-section p {
+#footer .left-section .text {
   opacity: 0.9;
   margin: auto;
   width: 100%;
@@ -3403,6 +3408,28 @@ body.dark-mode .cs-button-5:before {
   line-height: 1.92857143rem;
   color: #fff;
   text-align: center;
+  grid-area: text;
+}
+#footer .left-section .cta {
+  grid-area: cta;
+  aspect-ratio: 16/9;
+  margin-bottom: 1.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  gap: 0.3rem;
+}
+#footer .left-section .cta p {
+  font-size: 0.75rem;
+  color: #fff;
+}
+#footer .left-section .cta img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 155px;
+  min-height: 30px;
 }
 #footer .right-section {
   margin: auto;
@@ -3519,15 +3546,29 @@ body.dark-mode .cs-button-5:before {
     margin: 0;
     width: 25.5625rem;
     text-align: left;
+    grid-template-areas: "logo" "text" "cta";
+    gap: 1rem;
   }
   #footer .left-section .logo {
     margin-left: 0;
     height: 4rem;
     text-align: left;
+    margin-bottom: 0;
   }
   #footer .left-section p {
     margin-left: 0;
     text-align: left;
+  }
+  #footer .left-section .cta {
+    justify-content: unset;
+    gap: 0.5rem;
+  }
+  #footer .left-section .cta p {
+    font-size: 1rem;
+  }
+  #footer .left-section .cta img {
+    max-width: 320px;
+    max-height: 64px;
   }
   #footer .right-section {
     margin: 0;
