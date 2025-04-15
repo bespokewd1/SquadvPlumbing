@@ -1,7 +1,7 @@
 ---
 title: 'Renovation| Montano Plumbing & Contracting LTD.'
 description: 'Your Trusted Partner for Renovations and Plumbing'
-preloadImg: '/assets/images/cabinets2.jpg'
+preloadImg: '/assets/images/fence/fence-bg.avif'
 permalink: 'renovation/fence-deck-install/'
 eleventyNavigation:
 ---
@@ -14,9 +14,11 @@ eleventyNavigation:
 {% block head %}
     <link rel="stylesheet" href="/assets/css/fence-deck.css">
 
-        <meta property="og:url" content="{{ client.domain }}{{ page.url }}"/>
-        <meta property="og:image" content="{{ site.url }}/assets/images/ogmontano.jpg"/>
-        <meta property="og:image:secure_url" content="{{ site.url }}/assets/images/ogmontano.jpg"/>
+    <meta property="og:url" content="{{ client.domain }}{{ page.url }}"/>
+    <meta property="og:image" content="{{ site.url }}/assets/images/ogmontano.jpg"/>
+    <meta property="og:image:secure_url" content="{{ site.url }}/assets/images/ogmontano.jpg"/>
+
+    <script src="/assets/js/scroller.js" defer></script>
 {% endblock %}
 
 {% block body %}
@@ -38,11 +40,36 @@ eleventyNavigation:
 
     <!-- Background Image, there's a background image in the CSS for the parallax effect you'll need to change as well if you swap out our images -->
     <picture class="cs-background">
-        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/restaurant-space.jpeg">
-        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/restaurant-space.jpeg">
-        <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/restaurant-space.jpeg" alt="restaurant" width="2250" height="1500" aria-hidden="true">
+        <source media="(max-width: 600px)" srcset="/assets/images/fence/fence-bg.avif">
+        <source media="(min-width: 601px)" srcset="/assets/images/fence/fence-bg.avif">
+        <img decoding="async" src="/assets/images/fence/fence-bg.avif" alt="restaurant" width="2250" height="1500" aria-hidden="true">
     </picture>
+
+
+    <!--            Auto Scroll Brands                -->
+    <div id="autoscroll-gallery">
+        <div class="scroller">
+            <ul class="gallery-wrapper scroller-inner">
+            <li>
+                    <img
+                    loading="lazy"
+                    decoding="async"
+                    src="/assets/svgs/sun.svg"
+                    alt="navien brand logo"
+                    height="25"
+                    width="25"
+                    />
+
+                <p class="cs-text">
+                    LIMITED SUMMER SPOTS – BOOK NOW BEFORE WE’RE FULLY BOOKED!
+                </p>
+            </li>
+            </ul>
+        </div>
+    </div>
 </section>
+
+
 
 <!-- ============================================ -->
 <!--                 Why Choose                   -->
