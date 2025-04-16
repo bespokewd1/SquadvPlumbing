@@ -75,12 +75,6 @@
         display: none;
       }
     }
-
-    .cs-li-link {
-      &:hover {
-        color: var(--primary);
-      }
-    }
   }
 }
 
@@ -120,12 +114,32 @@
       .cs-nav {
         position: fixed;
         top: 0.5rem;
-        left: 60%;
-        transform: translateX(-40%);
+        // left: 60%;
+        // transform: translateX(-40%);
+        left: 58%;
+        transform: translateX(-47%);
 
         .cs-toggle {
           display: none;
         }
+      }
+
+      .cs-li-link {
+        color: rgba(255, 255, 255, 0.75);
+        &:hover {
+          filter: brightness(2);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  header#cs-navigation {
+    .cs-bottom-bar {
+      .cs-nav {
+        left: 60%;
+        transform: translateX(-40%);
       }
     }
   }
@@ -183,15 +197,24 @@
 
     .cs-title {
       /* 39px - 61px */
-      font-size: clamp(2.4375rem, 5vw, 3.8125rem);
+      font-size: clamp(2.6375rem, 6vw, 4.0125rem);
       margin-bottom: (28/16rem);
       color: #fff;
       text-align: center;
+
+      &:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.15);
+        z-index: -1;
+      }
     }
 
     .cs-h2 {
       /* 39px - 61px */
-      font-size: clamp(2.0375rem, 6vw, 3.2125rem);
+      font-size: clamp(2.0375rem, 6vw, 3.5125rem);
       color: #28a745;
       position: relative;
       text-shadow: var(--text-shadow-lg);
@@ -226,14 +249,17 @@
 
       .cs-sub-group {
         display: grid;
-        grid-template-areas: "text text" "logo img";
+        grid-template-areas: "text text" "logo img" "cta img";
         grid-template-columns: auto auto;
+        column-gap: 0.8rem;
+        margin-bottom: 1rem;
 
         img {
           float: right;
           grid-area: img;
           // margin: 0 0 0.5rem 1rem;
-          width: 200px;
+          max-width: 200px;
+          width: 100%;
           aspect-ratio: 1/1;
           height: auto;
           justify-self: start;
@@ -254,6 +280,31 @@
 
           svg {
             transform: scaleX(-1) rotate(344deg);
+          }
+        }
+
+        .cta-group {
+          grid-area: cta;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5rem;
+          text-transform: uppercase;
+
+          p {
+            text-align: center;
+            color: var(--bodyTextColorWhite);
+            font-size: clamp(1rem, 3vw, 1.5rem);
+          }
+          .cs-button-solid {
+            padding: 0 clamp(1rem, 2vw, 2rem);
+            background: linear-gradient(
+              280deg,
+              #239bec 0%,
+              #1055bc 50%,
+              #185fc9 100%
+            );
           }
         }
       }
@@ -385,8 +436,9 @@
     .cs-flex-group {
       max-width: (800/16rem);
       display: grid;
-      grid-template-areas: "h2 h2 h2" "text text arrow" "h3 img img" "number img img";
+      grid-template-areas: "h2 h2 h2" "text text arrow" "cta img img" "h3 img img" "number img img";
       position: relative;
+      column-gap: (16/16rem);
 
       .cs-h2 {
         grid-area: h2;
@@ -395,15 +447,11 @@
         text-align: center;
       }
 
-      .cs-qr {
-        grid-area: img;
-        max-width: (350/16rem);
-        width: 100%;
-      }
-
       .cs-text {
         grid-area: text;
         text-align-last: end;
+        height: fit-content;
+        align-self: center;
       }
 
       .cs-h3 {
@@ -417,6 +465,12 @@
       .cs-sub-group {
         display: contents;
 
+        .cs-qr {
+          grid-area: img;
+          max-width: (275/16rem);
+          width: 100%;
+        }
+
         .arrow-logo {
           grid-area: arrow;
 
@@ -425,6 +479,16 @@
 
             filter: drop-shadow(0 4px 4px rgb(0 0 0 / 0.5));
           }
+        }
+
+        .cta-group {
+          grid-area: cta;
+          height: fit-content;
+          flex-direction: row;
+          gap: 1rem;
+          margin-bottom: 1rem;
+          justify-self: end;
+          padding-right: 1rem;
         }
       }
     }
