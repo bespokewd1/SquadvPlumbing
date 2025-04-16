@@ -190,6 +190,7 @@
     aspect-ratio: 1/1;
     height: auto;
     justify-self: start;
+    border-radius: 6px;
   }
   #hero-1950 .cs-flex-group .cs-sub-group .cs-text {
     grid-area: text;
