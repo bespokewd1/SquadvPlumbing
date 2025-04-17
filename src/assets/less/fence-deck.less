@@ -157,6 +157,13 @@
 <---           Hero             -->
 <--- -------------------------- -*/
 
+@property --fill{
+    syntax: "<percentage>";
+    inherits: true;
+    initial-value: 0%;
+}
+
+
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #hero-1950 {
@@ -201,15 +208,8 @@
       margin-bottom: (28/16rem);
       color: #fff;
       text-align: center;
+      text-shadow: var(--text-shadow-lg);
 
-      &:after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        filter: blur(10px);
-        background-color: rgba(0, 0, 0, 0.15);
-        z-index: -1;
-      }
     }
 
     .cs-h2 {
@@ -219,14 +219,14 @@
       position: relative;
       text-shadow: var(--text-shadow-lg);
 
-      &:after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        filter: blur(10px);
-        background-color: rgba(0, 0, 0, 0.15);
-        z-index: -1;
-      }
+    //   &:after {
+    //     content: "";
+    //     position: absolute;
+    //     inset: 0;
+    //     filter: blur(10px);
+    //     background-color: rgba(0, 0, 0, 0.15);
+    //     z-index: -1;
+    //   }
     }
 
     .cs-text {
@@ -298,14 +298,9 @@
             color: var(--bodyTextColorWhite);
             font-size: clamp(1rem, 3vw, 1.5rem);
           }
+
           .cs-button-solid {
-            padding: 0 clamp(1rem, 2vw, 2rem);
-            background: linear-gradient(
-              280deg,
-              #239bec 0%,
-              #1055bc 50%,
-              #185fc9 100%
-            );
+
           }
         }
       }
@@ -344,32 +339,68 @@
       text-decoration: none;
       margin: 0;
       /* 32px - 48px */
-      padding: 0 clamp(2rem, 4vw, 3rem);
-      background-color: var(--primary);
       color: #fff;
       display: inline-block;
       position: relative;
       z-index: 1;
-
-      &:before {
-        content: "";
-        width: 0%;
+      &:before{
+        display: none;
+      }
+      span{
+        z-index: 2;
+        position: relative;
         height: 100%;
-        background: #000;
-        opacity: 1;
+        width: 100%;
         display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: width 0.3s;
+
+            padding: 0 clamp(1rem, 2vw, 2rem);
+            background: linear-gradient(
+              280deg,
+              #239bec 0%,
+              #1055bc 50%,
+              #185fc9 100%
+            );
       }
 
-      &:hover {
-        &:before {
-          width: 100%;
-        }
-      }
+            &:after{
+                content: "";
+                position: absolute;
+                inset: -3px;
+                z-index: -1;
+                border-radius: inherit;
+
+                background: conic-gradient(
+                    #239bec var(--fill),
+                    transparent var(--fill)
+                );
+                transition: --fill 0.6s ease-in-out;
+            }
+
+            &:hover{
+                &:after{
+                    --fill: 100%;
+                }
+            }
+
+    //   &:before {
+    //     content: "";
+    //     width: 0%;
+    //     height: 100%;
+    //     background: #000;
+    //     opacity: 1;
+    //     display: block;
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     z-index: -1;
+    //     transition: width 0.3s;
+    //   }
+
+    //   &:hover {
+    //     &:before {
+    //       width: 100%;
+    //     }
+    //   }
     }
 
     .cs-background {
@@ -386,12 +417,19 @@
         content: "";
         width: 100%;
         height: 100%;
+
         background: linear-gradient(
           180deg,
-          rgba(26, 26, 26, 0.86) 10.79%,
+          rgba(26, 26, 26, 0.26) 10.79%,
           rgba(26, 26, 26, 0) 48.32%,
-          rgba(26, 26, 26, 0.86) 82.84%
+          rgba(26, 26, 26, 0.26) 82.84%
         );
+        // background: linear-gradient(
+        //   180deg,
+        //   rgba(26, 26, 26, 0.86) 10.79%,
+        //   rgba(26, 26, 26, 0) 48.32%,
+        //   rgba(26, 26, 26, 0.86) 82.84%
+        // );
         /* prevents the cursor from interacting with it */
         pointer-events: none;
         display: block;
@@ -501,7 +539,7 @@
   // @media only screen and (min-width: 0rem) {
   #hero-1950 {
     .cs-background {
-      background: url("/assets/images/fence/fence-bg-alt.avif");
+      background: url("/assets/images/fence/all-fence-bg-alt.avif");
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -813,6 +851,7 @@
       z-index: 1;
       /* prevents padding from adding to the width */
       box-sizing: border-box;
+
 
       &:before {
         content: "";
@@ -1279,7 +1318,7 @@
         position: absolute;
         display: block;
         bottom: (-150/16rem);
-        /* position in the middle, 50% from the left, no matter how wide 
+        /* position in the middle, 50% from the left, no matter how wide
                    the screen gets, it will be placed on the center line of the div */
         left: 50%;
         /* push X amount of pixels from this 50% midpoint */
@@ -1311,7 +1350,7 @@
         position: absolute;
         display: block;
         bottom: (-100/16rem);
-        /* position in the middle, 50% from the left, no matter how wide 
+        /* position in the middle, 50% from the left, no matter how wide
                    the screen gets, it will be placed on the center line of the div */
         left: 50%;
         /* push X amount of pixels from this 50% midpoint */
@@ -1977,7 +2016,7 @@
         position: absolute;
         display: block;
         top: (-150/16rem);
-        /* position in the middle, 50% from the left, no matter how wide 
+        /* position in the middle, 50% from the left, no matter how wide
                    the screen gets, it will be placed on the center line of the div */
         left: 50%;
         /* push X amount of pixels from this 50% midpoint */
@@ -2009,7 +2048,7 @@
         position: absolute;
         display: block;
         top: (-100/16rem);
-        /* position in the middle, 50% from the left, no matter how wide 
+        /* position in the middle, 50% from the left, no matter how wide
                    the screen gets, it will be placed on the center line of the div */
         left: 50%;
         /* push X amount of pixels from this 50% midpoint */
@@ -2126,7 +2165,7 @@
     }
 
     .cs-stripes {
-      /* flips the element horizontally, creating a mirror of it's 
+      /* flips the element horizontally, creating a mirror of it's
                original orientation */
       transform: scaleX(-1);
       &:before {

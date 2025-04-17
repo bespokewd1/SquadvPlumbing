@@ -97,6 +97,11 @@
 /*-- -------------------------- -->
 <---           Hero             -->
 <--- -------------------------- -*/
+@property --fill {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 0%;
+}
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #hero-1950 {
@@ -135,14 +140,7 @@
     margin-bottom: 1.75rem;
     color: #fff;
     text-align: center;
-  }
-  #hero-1950 .cs-title:after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.15);
-    z-index: -1;
+    text-shadow: var(--text-shadow-lg);
   }
   #hero-1950 .cs-h2 {
     /* 39px - 61px */
@@ -150,14 +148,6 @@
     color: #28a745;
     position: relative;
     text-shadow: var(--text-shadow-lg);
-  }
-  #hero-1950 .cs-h2:after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.15);
-    z-index: -1;
   }
   #hero-1950 .cs-text {
     /* 16px - 20px */
@@ -220,10 +210,6 @@
     color: var(--bodyTextColorWhite);
     font-size: clamp(1rem, 3vw, 1.5rem);
   }
-  #hero-1950 .cs-flex-group .cs-sub-group .cta-group .cs-button-solid {
-    padding: 0 clamp(1rem, 2vw, 2rem);
-    background: linear-gradient(280deg, #239bec 0%, #1055bc 50%, #185fc9 100%);
-  }
   #hero-1950 .cs-flex-group .cs-h3 {
     font-size: clamp(1.5rem, 5vw, 2.3rem);
     color: var(--bodyTextColorWhite);
@@ -253,28 +239,34 @@
     text-decoration: none;
     margin: 0;
     /* 32px - 48px */
-    padding: 0 clamp(2rem, 4vw, 3rem);
-    background-color: var(--primary);
     color: #fff;
     display: inline-block;
     position: relative;
     z-index: 1;
   }
   #hero-1950 .cs-button-solid:before {
-    content: "";
-    width: 0%;
-    height: 100%;
-    background: #000;
-    opacity: 1;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: width 0.3s;
+    display: none;
   }
-  #hero-1950 .cs-button-solid:hover:before {
+  #hero-1950 .cs-button-solid span {
+    z-index: 2;
+    position: relative;
+    height: 100%;
     width: 100%;
+    display: block;
+    padding: 0 clamp(1rem, 2vw, 2rem);
+    background: linear-gradient(280deg, #239bec 0%, #1055bc 50%, #185fc9 100%);
+  }
+  #hero-1950 .cs-button-solid:after {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    z-index: -1;
+    border-radius: inherit;
+    background: conic-gradient(#239bec var(--fill), transparent var(--fill));
+    transition: --fill 0.6s ease-in-out;
+  }
+  #hero-1950 .cs-button-solid:hover:after {
+    --fill: 100%;
   }
   #hero-1950 .cs-background {
     width: 100%;
@@ -290,7 +282,7 @@
     content: "";
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(26, 26, 26, 0.86) 10.79%, rgba(26, 26, 26, 0) 48.32%, rgba(26, 26, 26, 0.86) 82.84%);
+    background: linear-gradient(180deg, rgba(26, 26, 26, 0.26) 10.79%, rgba(26, 26, 26, 0) 48.32%, rgba(26, 26, 26, 0.26) 82.84%);
     /* prevents the cursor from interacting with it */
     pointer-events: none;
     display: block;
@@ -378,7 +370,7 @@
 /* Large Desktop Parallax Effect - 100px */
 @media only screen and (min-width: 100rem) {
   #hero-1950 .cs-background {
-    background: url("/assets/images/fence/fence-bg-alt.avif");
+    background: url("/assets/images/fence/all-fence-bg-alt.avif");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1026,7 +1018,7 @@
     position: absolute;
     display: block;
     bottom: -9.375rem;
-    /* position in the middle, 50% from the left, no matter how wide 
+    /* position in the middle, 50% from the left, no matter how wide
                    the screen gets, it will be placed on the center line of the div */
     left: 50%;
     /* push X amount of pixels from this 50% midpoint */
@@ -1047,7 +1039,7 @@
     position: absolute;
     display: block;
     bottom: -6.25rem;
-    /* position in the middle, 50% from the left, no matter how wide 
+    /* position in the middle, 50% from the left, no matter how wide
                    the screen gets, it will be placed on the center line of the div */
     left: 50%;
     /* push X amount of pixels from this 50% midpoint */
@@ -1602,7 +1594,7 @@
     position: absolute;
     display: block;
     top: -9.375rem;
-    /* position in the middle, 50% from the left, no matter how wide 
+    /* position in the middle, 50% from the left, no matter how wide
                    the screen gets, it will be placed on the center line of the div */
     left: 50%;
     /* push X amount of pixels from this 50% midpoint */
@@ -1623,7 +1615,7 @@
     position: absolute;
     display: block;
     top: -6.25rem;
-    /* position in the middle, 50% from the left, no matter how wide 
+    /* position in the middle, 50% from the left, no matter how wide
                    the screen gets, it will be placed on the center line of the div */
     left: 50%;
     /* push X amount of pixels from this 50% midpoint */
@@ -1725,7 +1717,7 @@
     display: none;
   }
   #cta-96 .cs-stripes {
-    /* flips the element horizontally, creating a mirror of it's 
+    /* flips the element horizontally, creating a mirror of it's
                original orientation */
     transform: scaleX(-1);
   }
