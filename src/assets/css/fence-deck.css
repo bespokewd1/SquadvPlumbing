@@ -61,14 +61,16 @@
   }
 }
 @media only screen and (min-width: 1024px) {
+  header#cs-navigation .cs-logo img {
+    width: 75%;
+  }
   header#cs-navigation .cs-bottom-bar .cs-call {
     display: none;
   }
   header#cs-navigation .cs-bottom-bar .cs-nav {
     position: fixed;
     top: 0.5rem;
-    left: 58%;
-    transform: translateX(-47%);
+    left: 15.3125rem;
   }
   header#cs-navigation .cs-bottom-bar .cs-nav .cs-toggle {
     display: none;
@@ -81,6 +83,9 @@
   }
 }
 @media only screen and (min-width: 1200px) {
+  header#cs-navigation .cs-logo img {
+    width: 100%;
+  }
   header#cs-navigation .cs-bottom-bar .cs-nav {
     left: 60%;
     transform: translateX(-40%);
