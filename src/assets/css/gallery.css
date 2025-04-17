@@ -5,6 +5,7 @@
 @media only screen and (min-width: 0rem) {
   #gallery-48 {
     padding: var(--sectionPadding);
+    padding-top: clamp(5.5rem, 22vw, 20rem);
     position: relative;
   }
   #gallery-48 h3 {
@@ -129,5 +130,12 @@
   }
   #gallery-48 .cs-button-solid:hover:before {
     width: 100%;
+  }
+}
+@media only screen and (min-width: 769px) {
+  #gallery-48 {
+    padding: var(--sectionPadding);
+    padding-top: 12rem;
+    position: relative;
   }
 }
