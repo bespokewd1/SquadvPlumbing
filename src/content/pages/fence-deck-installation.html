@@ -1,28 +1,30 @@
 ---
-title: 'Renovation| Montano Plumbing & Contracting LTD.'
-description: 'Your Trusted Partner for Renovations and Plumbing'
-preloadImg: '/assets/images/fence/fence-bg.avif'
-permalink: 'renovation/fence-deck-install/'
+title: "Renovation| Montano Plumbing & Contracting LTD."
+description: "Your Trusted Partner for Renovations and Plumbing"
+preloadImg: "/assets/images/fence/fence-bg.avif"
+permalink: "renovation/fence-deck-install/"
 eleventyNavigation:
 ---
 
-    <!-- key: 'Fence & Deck Installation' -->
-    <!-- order: '2520' -->
-    <!-- parent: 'Renovation' -->
-{% extends "layouts/base.html" %}
+<!-- key: 'Fence & Deck Installation' -->
+<!-- order: '2520' -->
+<!-- parent: 'Renovation' -->
+{% extends "layouts/base.html" %} {% block head %}
+<link rel="stylesheet" href="/assets/css/fence-deck.css" />
 
-{% block head %}
-    <link rel="stylesheet" href="/assets/css/fence-deck.css">
+<meta property="og:url" content="{{ client.domain }}{{ page.url }}" />
+<meta
+    property="og:image"
+    content="{{ site.url }}/assets/images/ogmontano.jpg"
+/>
+<meta
+    property="og:image:secure_url"
+    content="{{ site.url }}/assets/images/ogmontano.jpg"
+/>
 
-    <meta property="og:url" content="{{ client.domain }}{{ page.url }}"/>
-    <meta property="og:image" content="{{ site.url }}/assets/images/ogmontano.jpg"/>
-    <meta property="og:image:secure_url" content="{{ site.url }}/assets/images/ogmontano.jpg"/>
-
-    <script src="/assets/js/scroller.js" defer></script>
+<script src="/assets/js/scroller.js" defer></script>
 <script src="/assets/js/scroll-header.js" defer></script>
-{% endblock %}
-
-{% block body %}
+{% endblock %} {% block body %}
 <!-- ============================================ -->
 <!--                    Hero                      -->
 <!-- ============================================ -->
@@ -31,53 +33,155 @@ eleventyNavigation:
     <div class="cs-container">
         <div class="cs-content">
             <h1 class="cs-title">We Build Your Dream Decks & Fence!</h1>
+            <div class="images-group">
+                <picture class="cs-hero-picture">
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="/assets/images/fence/fence-1.avif"
+                    />
+                    <source
+                        media="(min-width: 601px)"
+                        srcset="/assets/images/fence/fence-1.avif"
+                    />
+                    <img
+                        decoding="async"
+                        src="/assets/images/fence/fence-1.avif"
+                        alt="restaurant"
+                        width="1200"
+                        height="800"
+                        aria-hidden="true"
+                        class="cs-hero-image"
+                    />
+                </picture>
+
+                <picture class="cs-hero-picture">
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="/assets/images/fence/fence-2.avif"
+                    />
+                    <source
+                        media="(min-width: 601px)"
+                        srcset="/assets/images/fence/fence-2.avif"
+                    />
+                    <img
+                        decoding="async"
+                        src="/assets/images/fence/fence-2.avif"
+                        alt="restaurant"
+                        width="1200"
+                        height="800"
+                        aria-hidden="true"
+                        class="cs-hero-image"
+                    />
+                </picture>
+                <picture class="cs-hero-picture">
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="/assets/images/fence/fence-3.avif"
+                    />
+                    <source
+                        media="(min-width: 601px)"
+                        srcset="/assets/images/fence/fence-3.avif"
+                    />
+                    <img
+                        decoding="async"
+                        src="/assets/images/fence/fence-3.avif"
+                        alt="restaurant"
+                        width="1200"
+                        height="800"
+                        aria-hidden="true"
+                        class="cs-hero-image"
+                    />
+                </picture>
+                <picture class="cs-hero-picture">
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="/assets/images/fence/fence-4.avif"
+                    />
+                    <source
+                        media="(min-width: 601px)"
+                        srcset="/assets/images/fence/fence-4.avif"
+                    />
+                    <img
+                        decoding="async"
+                        src="/assets/images/fence/fence-4.avif"
+                        alt="restaurant"
+                        width="1200"
+                        height="800"
+                        aria-hidden="true"
+                        class="cs-hero-image"
+                    />
+                </picture>
+            </div>
             <div class="cs-flex-group">
                 <h2 class="cs-h2">Financing Available</h2>
                 <div class="cs-sub-group">
-                    <img class="cs-qr" loading="lazy" decoding="async" src="/assets/images/fence/finance-it-qr.avif" alt="restaurant" width="160" height="90" aria-hidden="true">
-                    <p class="cs-text">Scan the qr code to get pre-approved </p>
+                    <img
+                        class="cs-qr"
+                        loading="lazy"
+                        decoding="async"
+                        src="/assets/images/fence/finance-it-qr.avif"
+                        alt="restaurant"
+                        width="160"
+                        height="90"
+                        aria-hidden="true"
+                    />
+                    <p class="cs-text">Scan the qr code to get pre-approved:</p>
                     <div class="arrow-logo">
-                        <svg width="70" height="50" viewBox="0 0 353 167" fill="currentColor" xmlns="http://www.w3.org/2000/svg" >
-                        <g clip-path="url(#clip0_1_55)">
-                        <path d="M189.708 -210.144C198.638 -208.554 207.438 -206.464 216.058 -203.624C238.988 -196.084 259.678 -184.534 278.088 -168.924C296.468 -153.334 311.188 -134.804 322.488 -113.534C331.618 -96.3439 337.948 -78.1739 341.478 -59.0439C342.698 -52.4139 343.508 -45.7139 344.018 -38.9839C344.548 -32.0039 344.658 -25.0139 344.368 -18.0239C343.738 -2.52388 341.228 12.6761 336.738 27.5361C329.828 50.4561 318.878 71.2461 303.668 89.7461C288.548 108.136 270.388 122.786 249.298 133.836C235.868 140.876 221.768 146.126 206.988 149.536C199.168 151.346 191.248 152.576 183.248 153.316C175.798 154.006 168.328 154.216 160.858 153.926C145.068 153.316 129.598 150.706 114.498 146.016C90.6982 138.616 69.2582 126.886 50.1782 110.856C48.9382 109.816 47.7181 108.736 46.2581 107.486C53.0081 106.496 59.4582 105.546 66.2682 104.546C44.4282 95.4361 22.9882 86.2861 0.988159 77.6461C11.7882 98.2861 22.4482 118.686 33.1182 139.086C33.2082 139.066 33.2881 139.046 33.3781 139.026C34.6981 131.916 36.0082 124.806 37.3582 117.526C39.6282 120.166 41.7882 122.606 44.1482 124.876C51.7282 132.146 60.2482 138.106 69.4282 143.156C85.4382 151.946 102.528 157.806 120.338 161.636C128.968 163.496 137.688 164.746 146.478 165.546C154.888 166.306 163.318 166.496 171.748 166.146C196.528 165.116 220.228 159.466 242.758 149.056C260.708 140.766 276.948 129.906 291.448 116.466C313.988 95.5861 330.488 70.6861 341.008 41.8261C345.238 30.2061 348.248 18.2661 350.108 6.04613C351.218 -1.21387 351.848 -8.52387 352.148 -15.8739C352.508 -24.7939 352.228 -33.6839 351.298 -42.5539C348.828 -66.2339 342.138 -88.6739 331.178 -109.814C323.428 -124.754 313.838 -138.414 302.438 -150.804C287.138 -167.434 269.458 -180.954 249.378 -191.334C232.658 -199.974 215.028 -205.924 196.528 -209.324C194.258 -209.744 191.988 -210.224 189.668 -210.354C189.698 -210.274 189.708 -210.214 189.708 -210.144Z" fill="currentColor"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_1_55">
-                        <rect width="351.33" height="378.08" fill="white" transform="matrix(-1 0 0 1 352.328 -211.754)"/>
-                        </clipPath>
-                        </defs>
+                        <svg
+                            width="70"
+                            height="50"
+                            viewBox="0 0 353 167"
+                            fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <g clip-path="url(#clip0_1_55)">
+                                <path
+                                    d="M189.708 -210.144C198.638 -208.554 207.438 -206.464 216.058 -203.624C238.988 -196.084 259.678 -184.534 278.088 -168.924C296.468 -153.334 311.188 -134.804 322.488 -113.534C331.618 -96.3439 337.948 -78.1739 341.478 -59.0439C342.698 -52.4139 343.508 -45.7139 344.018 -38.9839C344.548 -32.0039 344.658 -25.0139 344.368 -18.0239C343.738 -2.52388 341.228 12.6761 336.738 27.5361C329.828 50.4561 318.878 71.2461 303.668 89.7461C288.548 108.136 270.388 122.786 249.298 133.836C235.868 140.876 221.768 146.126 206.988 149.536C199.168 151.346 191.248 152.576 183.248 153.316C175.798 154.006 168.328 154.216 160.858 153.926C145.068 153.316 129.598 150.706 114.498 146.016C90.6982 138.616 69.2582 126.886 50.1782 110.856C48.9382 109.816 47.7181 108.736 46.2581 107.486C53.0081 106.496 59.4582 105.546 66.2682 104.546C44.4282 95.4361 22.9882 86.2861 0.988159 77.6461C11.7882 98.2861 22.4482 118.686 33.1182 139.086C33.2082 139.066 33.2881 139.046 33.3781 139.026C34.6981 131.916 36.0082 124.806 37.3582 117.526C39.6282 120.166 41.7882 122.606 44.1482 124.876C51.7282 132.146 60.2482 138.106 69.4282 143.156C85.4382 151.946 102.528 157.806 120.338 161.636C128.968 163.496 137.688 164.746 146.478 165.546C154.888 166.306 163.318 166.496 171.748 166.146C196.528 165.116 220.228 159.466 242.758 149.056C260.708 140.766 276.948 129.906 291.448 116.466C313.988 95.5861 330.488 70.6861 341.008 41.8261C345.238 30.2061 348.248 18.2661 350.108 6.04613C351.218 -1.21387 351.848 -8.52387 352.148 -15.8739C352.508 -24.7939 352.228 -33.6839 351.298 -42.5539C348.828 -66.2339 342.138 -88.6739 331.178 -109.814C323.428 -124.754 313.838 -138.414 302.438 -150.804C287.138 -167.434 269.458 -180.954 249.378 -191.334C232.658 -199.974 215.028 -205.924 196.528 -209.324C194.258 -209.744 191.988 -210.224 189.668 -210.354C189.698 -210.274 189.708 -210.214 189.708 -210.144Z"
+                                    fill="currentColor"
+                                />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1_55">
+                                    <rect
+                                        width="351.33"
+                                        height="378.08"
+                                        fill="white"
+                                        transform="matrix(-1 0 0 1 352.328 -211.754)"
+                                    />
+                                </clipPath>
+                            </defs>
                         </svg>
                     </div>
 
                     <div class="cta-group">
-                        <p>or</p>
-                        <a
-                            href="https://www.financeit.ca/en/direct/payment-plan/YT0yNzEzNTcmbD0mcD1QemIwb1duaDZNemhEa3hkSTQ5Z1R3JnM9MCZ2PTE=/apply?slug=PBTFXw"
-                            class="cs-button-solid"
-                        >
-                            <!-- <svg -->
-                            <!-- xmlns="http://www.w3.org/2000/svg" -->
-                            <!-- width="24" -->
-                            <!-- height="24" -->
-                            <!-- viewBox="0 0 24 24" -->
-                            <!-- fill="none" -->
-                            <!-- stroke="currentColor" -->
-                            <!-- stroke-width="2" -->
-                            <!-- stroke-linecap="round" -->
-                            <!-- stroke-linejoin="round" -->
-                            <!-- class="lucide lucide-thumbs-up-icon lucide-thumbs-up" -->
-                            <!-- > -->
-                            <!-- <path d="M7 10v12" /> -->
-                            <!-- <path -->
-                            <!--     d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z" -->
-                            <!-- /> -->
-                            <!-- </svg> -->
-                            Click here
-                        </a>
+                        <p class="text-or">or</p>
+                        <div class="cs-button-solid-group">
+                            <a
+                                href="https://www.financeit.ca/en/direct/payment-plan/YT0yNzEzNTcmbD0mcD1QemIwb1duaDZNemhEa3hkSTQ5Z1R3JnM9MCZ2PTE=/apply?slug=PBTFXw"
+                                class="cs-button-solid"
+                            >
+                                <!-- <svg -->
+                                <!-- xmlns="http://www.w3.org/2000/svg" -->
+                                <!-- width="24" -->
+                                <!-- height="24" -->
+                                <!-- viewBox="0 0 24 24" -->
+                                <!-- fill="none" -->
+                                <!-- stroke="currentColor" -->
+                                <!-- stroke-width="2" -->
+                                <!-- stroke-linecap="round" -->
+                                <!-- stroke-linejoin="round" -->
+                                <!-- class="lucide lucide-thumbs-up-icon lucide-thumbs-up" -->
+                                <!-- > -->
+                                <!-- <path d="M7 10v12" /> -->
+                                <!-- <path -->
+                                <!--     d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z" -->
+                                <!-- /> -->
+                                <!-- </svg> -->
+                                Click here
+                            </a>
+                        </div>
                     </div>
-
                 </div>
-
 
                 <h3 class="cs-h3">Call for more info</h3>
                 <p class="cs-number">{{ client.phoneFormatted }}</p>
@@ -87,11 +191,23 @@ eleventyNavigation:
 
     <!-- Background Image, there's a background image in the CSS for the parallax effect you'll need to change as well if you swap out our images -->
     <picture class="cs-background">
-        <source media="(max-width: 600px)" srcset="/assets/images/fence/fence-bg-alt.avif">
-        <source media="(min-width: 601px)" srcset="/assets/images/fence/fence-bg-alt.avif">
-        <img decoding="async" src="/assets/images/fence/fence-bg-alt.avif" alt="restaurant" width="2250" height="1500" aria-hidden="true">
+        <source
+            media="(max-width: 600px)"
+            srcset="/assets/images/fence/all-fence-bg.avif"
+        />
+        <source
+            media="(min-width: 601px)"
+            srcset="/assets/images/fence/all-fence-bg.avif"
+        />
+        <img
+            decoding="async"
+            src="/assets/images/fence/all-fence-bg.avif"
+            alt="restaurant"
+            width="2250"
+            height="1500"
+            aria-hidden="true"
+        />
     </picture>
-
 
     <!--            Auto Scroll Brands                -->
     <!-- <div id="autoscroll-gallery"> -->
@@ -115,9 +231,5 @@ eleventyNavigation:
     <!--     </div> -->
     <!-- </div> -->
 </section>
-
-
-                                
-                                
 
 {% endblock %}
