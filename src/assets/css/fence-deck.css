@@ -87,7 +87,7 @@
     width: 100%;
   }
   header#cs-navigation .cs-bottom-bar .cs-nav {
-    left: 55%;
+    left: 55% !important;
     transform: translateX(-40%);
   }
 }
