@@ -165,7 +165,7 @@ eleventyNavigation:
         const rating = parseInt(star.getAttribute('data-rating'));
         stars.forEach(s => s.classList.remove('selected'));
         star.classList.add('selected');
-        forEach(star => {
+        stars.forEach(star => {
             const starRating = parseInt(star.getAttribute('data-rating'));
             if (starRating <= rating) {
             star.classList.add('selected');
