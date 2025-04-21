@@ -200,6 +200,17 @@ eleventyNavigation:
 
       window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
     }
+
+
+    function highlightStars(rating) {
+    stars.forEach(star => {
+      const starRating = parseInt(star.getAttribute('data-rating'));
+      if (starRating <= rating) {
+        star.classList.add('selected');
+      } else {
+        star.classList.remove('selected');
+      }
+    });
   </script>
 
 {% endblock %}
