@@ -164,6 +164,16 @@ permalink: 'review/'
         const rating = parseInt(star.getAttribute('data-rating'));
         stars.forEach(s => s.classList.remove('selected'));
         star.classList.add('selected');
+        
+
+        if (rating >= 4) {
+          goodFeedback.style.display = 'block';
+          badFeedback.style.display = 'none';
+        } else {
+          goodFeedback.style.display = 'none';
+          badFeedback.style.display = 'block';
+        }
+
         stars.forEach(star => {
             const starRating = parseInt(star.getAttribute('data-rating'));
             if (starRating <= rating) {
@@ -172,20 +182,6 @@ permalink: 'review/'
             star.classList.remove('selected');
             }
         })
-
-        if(!rating){
-          goodFeedback.style.display = 'none';
-          badFeedback.style.display = 'none';
-        }
-        else if (rating >= 4) {
-          goodFeedback.style.display = 'block';
-          badFeedback.style.display = 'none';
-        } else {
-          goodFeedback.style.display = 'none';
-          badFeedback.style.display = 'block';
-        }
-
-
       });
     });
 
