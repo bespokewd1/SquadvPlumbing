@@ -11,9 +11,7 @@ eleventyNavigation:
 {% extends "layouts/base.html" %}
 
 {% block head %}
-<!-- Added "renovation.css" because "fence-deck.css" is not working -->
-    <link rel="stylesheet" href="/assets/css/renovation.css">
-    <!-- <link rel="stylesheet" href="/assets/css/fence-deck.css"> -->
+    <link rel="stylesheet" href="/assets/css/fence-deck.css">
 
         <meta property="og:url" content="{{ client.domain }}{{ page.url }}"/>
         <meta property="og:image" content="{{ site.url }}/assets/images/ogmontano.jpg"/>
@@ -79,9 +77,7 @@ eleventyNavigation:
             </p>
         </div>
 
-
-        <!-- will use inline style as "deck-fence.css" is not working  -->
-        <ul class="cs-card-group" style="grid-template-columns: repeat(8, 1fr);">
+        <ul class="cs-card-group">
             <li class="cs-item">
                 <a href="" class="cs-link">
                     <h3 class="cs-h3">Fence Installation</h3>

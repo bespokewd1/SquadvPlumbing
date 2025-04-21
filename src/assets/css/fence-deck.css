@@ -319,7 +319,7 @@
     padding: 0;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     /* 16px - 20px */
     gap: clamp(1rem, 2.5vw, 1.25rem);
   }
