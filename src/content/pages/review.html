@@ -190,8 +190,6 @@ permalink: 'review/'
         const starRating = parseInt(star.getAttribute('data-rating'));
         if (starRating <= rating) {
           star.classList.add('selected');
-        } else {
-          star.classList.remove('selected');
         }
       });
     }
