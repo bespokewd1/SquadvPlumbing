@@ -119,7 +119,7 @@ permalink: 'review/'
       <span class="star" data-rating="5">★</span>
     </div>
 
-    <div id="goodFeedback" class="review-feedback-section">
+    <div id="goodFeedback" class="review-feedback-section" style="display: none;">
       <p>Thank you! We're thrilled you’re happy with our service. Please click below to leave us a Google review:</p>
       <div class="review-buttons">
         <a href="https://www.facebook.com/yeg.mpc/reviews" target="_blank">
@@ -131,7 +131,7 @@ permalink: 'review/'
       </div>
     </div>
 
-    <div id="badFeedback" class="feedback-section">
+    <div id="badFeedback" class="feedback-section" style="display: none;">
       <p>We're sorry we didn’t meet your expectations. Please share your feedback and we’ll get in touch right away.</p>
       <textarea class="textarea" rows="4" placeholder="Tell us what happened..."></textarea>
       <input type="text" placeholder="Your name (optional)" />
@@ -173,6 +173,15 @@ permalink: 'review/'
           goodFeedback.style.display = 'none';
           badFeedback.style.display = 'block';
         }
+
+        stars.forEach(star => {
+            const starRating = parseInt(star.getAttribute('data-rating'));
+            if (starRating <= rating) {
+            star.classList.add('selected');
+            } else {
+            star.classList.remove('selected');
+            }
+        })
       });
     });
 
