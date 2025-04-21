@@ -187,18 +187,6 @@ eleventyNavigation:
       });
     }
 
-
-    function highlightSelectedStars(rating) {
-      stars.forEach(star => {
-        const starRating = parseInt(star.getAttribute('data-rating'));
-        if (starRating <= rating) {
-          star.classList.add('selected');
-        } else {
-          star.classList.remove('selected');
-        }
-      });
-    }
-
     function sendFeedback() {
       const message = document.querySelector('#badFeedback textarea').value.trim();
       const name = document.querySelector('#badFeedback input[type="text"]').value.trim();
