@@ -112,11 +112,11 @@ permalink: 'review/'
     </p>
 
     <div class="review-stars" id="starContainer">
-      <span class="star" data-rating="1">★</span>
-      <span class="star" data-rating="2">★</span>
-      <span class="star" data-rating="3">★</span>
-      <span class="star" data-rating="4">★</span>
-      <span class="star" data-rating="5">★</span>
+      <span onclick="selectStars" class="star" data-rating="1">★</span>
+      <span onclick="selectStars" class="star" data-rating="2">★</span>
+      <span onclick="selectStars" class="star" data-rating="3">★</span>
+      <span onclick="selectStars" class="star" data-rating="4">★</span>
+      <span onclick="selectStars" class="star" data-rating="5">★</span>
     </div>
 
     <div id="goodFeedback" class="review-feedback-section">
@@ -190,6 +190,8 @@ permalink: 'review/'
         const starRating = parseInt(star.getAttribute('data-rating'));
         if (starRating <= rating) {
           star.classList.add('selected');
+        } else {
+          star.classList.remove('selected');
         }
       });
     }
