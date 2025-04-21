@@ -173,15 +173,6 @@ permalink: 'review/'
           goodFeedback.style.display = 'none';
           badFeedback.style.display = 'block';
         }
-
-        stars.forEach(star => {
-            const starRating = parseInt(star.getAttribute('data-rating'));
-            if (starRating <= rating) {
-            star.classList.add('selected');
-            } else {
-            star.classList.remove('selected');
-            }
-        })
       });
     });
 
