@@ -173,6 +173,12 @@ eleventyNavigation:
           goodFeedback.style.display = 'none';
           badFeedback.style.display = 'block';
         }
+        if (starRating <= rating) {
+          star.classList.add('selected');
+        } else {
+          star.classList.remove('selected');
+        }
+
       });
     });
 
