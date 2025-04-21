@@ -176,15 +176,24 @@ eleventyNavigation:
       });
     });
 
+    // function highlightStars(rating) {
+    //   stars.forEach(star => {
+    //     const starRating = parseInt(star.getAttribute('data-rating'));
+    //     if (starRating <= rating) {
+    //       star.classList.add('hover');
+    //     } else {
+    //       star.classList.remove('hover');
+    //     }
+    //   });
+    // }
+
+
     function highlightStars(rating) {
-      stars.forEach(star => {
+    stars.forEach(star => {
         const starRating = parseInt(star.getAttribute('data-rating'));
-        if (starRating <= rating) {
-          star.classList.add('hover');
-        } else {
-          star.classList.remove('hover');
-        }
-      });
+        star.classList.toggle('selected', starRating <= rating);
+        star.classList.toggle('hover', starRating <= rating);
+    });
     }
 
     function sendFeedback() {
