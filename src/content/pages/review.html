@@ -3,8 +3,9 @@ title: 'Review| Montano Plumbing & Contracting LTD.'
 description: 'Your Trusted Partner for Renovations and Plumbing'
 preloadImg: '/assets/images/cabinets2.jpg'
 permalink: 'review/'
-
-
+eleventyNavigation:
+    key: Review
+    order: 600
 ---
 
 {% extends "layouts/base.html" %}
@@ -112,11 +113,11 @@ permalink: 'review/'
     </p>
 
     <div class="review-stars" id="starContainer">
-      <span onclick="selectStars" class="star" data-rating="1">★</span>
-      <span onclick="selectStars" class="star" data-rating="2">★</span>
-      <span onclick="selectStars" class="star" data-rating="3">★</span>
-      <span onclick="selectStars" class="star" data-rating="4">★</span>
-      <span onclick="selectStars" class="star" data-rating="5">★</span>
+      <span class="star" data-rating="1">★</span>
+      <span class="star" data-rating="2">★</span>
+      <span class="star" data-rating="3">★</span>
+      <span class="star" data-rating="4">★</span>
+      <span class="star" data-rating="5">★</span>
     </div>
 
     <div id="goodFeedback" class="review-feedback-section">
@@ -182,16 +183,6 @@ permalink: 'review/'
           star.classList.add('hover');
         } else {
           star.classList.remove('hover');
-        }
-      });
-    }
-    function selectStars(rating) {
-      stars.forEach(star => {
-        const starRating = parseInt(star.getAttribute('data-rating'));
-        if (starRating <= rating) {
-          star.classList.add('selected');
-        } else {
-          star.classList.remove('selected');
         }
       });
     }
