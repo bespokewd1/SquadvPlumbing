@@ -180,12 +180,12 @@ eleventyNavigation:
       stars.forEach(star => {
         const starRating = parseInt(star.getAttribute('data-rating'));
         if (starRating <= rating) {
-          star.classList.add('selected');
+          star.classList.add('hover');
         } else {
-          star.classList.remove('selected');
+          star.classList.remove('hover');
         }
       });
-    }                                                                              
+    }
 
     function sendFeedback() {
       const message = document.querySelector('#badFeedback textarea').value.trim();
