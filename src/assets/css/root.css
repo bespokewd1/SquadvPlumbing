@@ -3617,6 +3617,11 @@ body.dark-mode .cs-button-5:before {
     display: inline-block;
   }
 }
+@media only screen and (min-width:79rem){
+  #footer .left-section{
+    margin-left: 2.5rem;
+  }
+}
 /* Dark Mode - Kept separate as it modifies a parent element */
 @media only screen and (min-width: 0rem) {
   body.dark-mode #footer {
