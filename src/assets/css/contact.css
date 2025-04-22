@@ -494,6 +494,10 @@
 }
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
+  #contact-1750 {
+    max-width: 85rem;
+    margin: auto;
+  }
   #contact-1750 .cs-container {
     width: 65%;
     max-width: 64rem;
@@ -529,6 +533,7 @@
   #contact-1750 {
     padding-top: 7vw;
     padding-bottom: 9vw;
+    overflow: visible;
   }
   #contact-1750 .cs-container {
     margin: 0 auto;
@@ -566,7 +571,7 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #subscribe-1719 {
-    background-color: #F7F7F7;
+    background-color: #f7f7f7;
     overflow: hidden;
     display: flex;
     flex-direction: column;
