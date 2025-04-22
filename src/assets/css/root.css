@@ -3554,6 +3554,7 @@ body.dark-mode .cs-button-5:before {
     text-align: left;
     grid-template-areas: "logo" "text" "cta";
     gap: 1rem;
+    margin-left: 2.5rem;
   }
   #footer .left-section .logo {
     margin-left: 0;
