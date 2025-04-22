@@ -3617,6 +3617,9 @@ body.dark-mode .cs-button-5:before {
   #footer .credit .copyright {
     display: inline-block;
   }
+  #footer .left-section {
+    margin-left: 2.5rem;
+  }
 }
 @media only screen and (min-width:79rem){
   #footer .left-section{
