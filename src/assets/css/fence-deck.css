@@ -271,7 +271,7 @@
 /* Large Desktop Parallax Effect - 100px */
 @media only screen and (min-width: 100rem) {
   #hero-1250 .cs-background {
-    background: url("/assets/images/kitchenrenov.webp");
+    background: url("/assets/images/fence/deck-fence-bg.avif");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -283,8 +283,8 @@
   }
 }
 /*-- -------------------------- -->
-  <---          Services          -->
-  <--- -------------------------- -*/
+<---          Services          -->
+<--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #services-1251 {
@@ -476,8 +476,8 @@
   }
 }
 /*-- -------------------------- -->
-  <---          Services          -->
-  <--- -------------------------- -*/
+<---          Services          -->
+<--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #services-1252 {
@@ -675,8 +675,8 @@
   }
 }
 /*-- -------------------------- -->
-  <---          Gallery           -->
-  <--- -------------------------- -*/
+<---          Gallery           -->
+<--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #gallery-48 {

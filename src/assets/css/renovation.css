@@ -804,3 +804,8 @@
     width: 100%;
   }
 }
+@media only screen and (max-width: 600px) {
+  #hero-408 .cs-button-solid {
+    font-size: 0.5rem;
+  }
+}

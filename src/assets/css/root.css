@@ -3548,6 +3548,9 @@ body.dark-mode .cs-button-5:before {
     width: 96%;
     padding: 0;
   }
+  #footer .container .left-section {
+    margin-left: 2.5rem;
+  }
   #footer .left-section {
     margin: 0;
     width: 25.5625rem;
@@ -3621,8 +3624,8 @@ body.dark-mode .cs-button-5:before {
     margin-left: 2.5rem;
   }
 }
-@media only screen and (min-width:79rem){
-  #footer .left-section{
+@media only screen and (min-width: 79rem) {
+  #footer .left-section {
     margin-left: 2.5rem;
   }
 }
