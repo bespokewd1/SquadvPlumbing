@@ -2624,22 +2624,24 @@ body {
         );
     }
 
-    #services-1729 .cs-item:nth-child(odd):last-child {
-        background: rgb(35, 155, 236);
-        background: linear-gradient(
-            280deg,
-            rgba(35, 155, 236, 1) 0%,
-            rgba(16, 85, 188, 1) 50%,
-            rgba(24, 95, 201, 1) 100%
-        );
-        grid-column: 1/-1;
+    #services-1729 {
+        .cs-item:nth-child(odd):last-child {
+            background: rgb(35, 155, 236);
+            background: linear-gradient(
+                280deg,
+                rgba(35, 155, 236, 1) 0%,
+                rgba(16, 85, 188, 1) 50%,
+                rgba(24, 95, 201, 1) 100%
+            );
+            grid-column: 1/-1;
 
-        .cs-picture {
-            order: 1;
-        }
+            .cs-picture {
+                order: 1;
+            }
 
-        .cs-details {
-            order: 2;
+            .cs-details {
+                order: 2;
+            }
         }
     }
 
@@ -2724,16 +2726,6 @@ body {
         order: 2;
     }
 
-    #services-1729 .cs-item:nth-child(odd):last-child {
-        .cs-picture {
-            order: 2;
-        }
-
-        .cs-details {
-            order: 1;
-        }
-    }
-
     #services-1729 .cs-details {
         width: 50%;
     }
@@ -2743,6 +2735,18 @@ body {
     #services-1729 .cs-picture {
         height: 100%;
         max-height: none;
+    }
+
+    #services-1729 {
+        .cs-item:nth-child(odd):last-child {
+            .cs-picture {
+                order: 2;
+            }
+
+            .cs-details {
+                order: 1;
+            }
+        }
     }
 }
 /* Large Desktop - 1300px */
@@ -2763,11 +2767,6 @@ body {
     }
     #services-1729 .cs-item:nth-of-type(3) .cs-picture {
         order: 1;
-    }
-    #services-1729 .cs-item:nth-child(odd):last-child {
-        .cs-picture {
-            order: 2;
-        }
     }
 }
 /* Dark Mode */

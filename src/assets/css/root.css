@@ -2348,12 +2348,6 @@ body {
   #services-1729 .cs-item:nth-of-type(3) .cs-picture {
     order: 2;
   }
-  #services-1729 .cs-item:nth-child(odd):last-child .cs-picture {
-    order: 2;
-  }
-  #services-1729 .cs-item:nth-child(odd):last-child .cs-details {
-    order: 1;
-  }
   #services-1729 .cs-details {
     width: 50%;
   }
@@ -2363,6 +2357,12 @@ body {
   #services-1729 .cs-picture {
     height: 100%;
     max-height: none;
+  }
+  #services-1729 .cs-item:nth-child(odd):last-child .cs-picture {
+    order: 2;
+  }
+  #services-1729 .cs-item:nth-child(odd):last-child .cs-details {
+    order: 1;
   }
 }
 /* Large Desktop - 1300px */
@@ -2383,9 +2383,6 @@ body {
   }
   #services-1729 .cs-item:nth-of-type(3) .cs-picture {
     order: 1;
-  }
-  #services-1729 .cs-item:nth-child(odd):last-child .cs-picture {
-    order: 2;
   }
 }
 /* Dark Mode */
