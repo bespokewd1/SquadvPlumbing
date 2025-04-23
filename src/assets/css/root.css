@@ -21,8 +21,8 @@
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
     --canadaBannerHeight: 6.5rem;
     --canada-banner-bg: #28a745;
-    --text-shadow-lg: 0px 1px 2px rgba(0, 0, 0, 0.25), 0px 3px 2px rgb(0 0 0 / 0.25),
-      0px 4px 8px rgb(0 0 0 / 0.25);
+    --text-shadow-lg: 0px 1px 2px rgba(0, 0, 0, 0.25),
+            0px 3px 2px rgb(0 0 0 / 0.25), 0px 4px 8px rgb(0 0 0 / 0.25);
   }
   .cs-topper {
     display: block;
@@ -395,7 +395,7 @@
     width: clamp(3rem, 7.2vw, 3.5rem);
     height: clamp(3rem, 7.2vw, 3.5rem);
     margin: 0 0 0 auto;
-    background-color: #484848;
+    background-color: transparent;
     border: none;
     display: flex;
     justify-content: center;
@@ -2257,6 +2257,17 @@ body {
     background: #239bec;
     background: linear-gradient(280deg, #239bec 0%, #1055bc 50%, #185fc9 100%);
   }
+  #services-1729 .cs-item:nth-child(odd):last-child {
+    background: #239bec;
+    background: linear-gradient(280deg, #239bec 0%, #1055bc 50%, #185fc9 100%);
+    grid-column: 1/-1;
+  }
+  #services-1729 .cs-item:nth-child(odd):last-child .cs-picture {
+    order: 1;
+  }
+  #services-1729 .cs-item:nth-child(odd):last-child .cs-details {
+    order: 2;
+  }
   #services-1729 .cs-picture {
     width: 100%;
     max-height: 21.25rem;
@@ -2337,6 +2348,12 @@ body {
   #services-1729 .cs-item:nth-of-type(3) .cs-picture {
     order: 2;
   }
+  #services-1729 .cs-item:nth-child(odd):last-child .cs-picture {
+    order: 2;
+  }
+  #services-1729 .cs-item:nth-child(odd):last-child .cs-details {
+    order: 1;
+  }
   #services-1729 .cs-details {
     width: 50%;
   }
@@ -2366,6 +2383,9 @@ body {
   }
   #services-1729 .cs-item:nth-of-type(3) .cs-picture {
     order: 1;
+  }
+  #services-1729 .cs-item:nth-child(odd):last-child .cs-picture {
+    order: 2;
   }
 }
 /* Dark Mode */
