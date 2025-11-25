@@ -13,6 +13,9 @@ eleventyNavigation:
 {% extends "layouts/base.html" %}
 
 {% block head %}
+    <link rel="preload" as="style" href="/assets/css/home-critical.css" />
+    <link rel="stylesheet" href="/assets/css/home-critical.css" />
+
     <link rel="stylesheet" href="/assets/css/local.css"/>
     <link rel="stylesheet" href="/assets/css/critical.css"/>
         <meta property="og:url" content="{{ client.domain }}{{ page.url }}"/>
@@ -27,6 +30,9 @@ eleventyNavigation:
     <link rel="preload" as="image" href="/assets/images/m3.avif" media="(max-width: 600px)">
     <link rel="preload" as="image" href="/assets/images/3.avif" media="(min-width: 601px)">
 
+    <!-- Load GSAP (Add this before your closing </body> tag) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="/assets/js/home.js"></script>
     <!-- Script for Netlify Identity -->
     <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script defer>
@@ -87,15 +93,81 @@ eleventyNavigation:
 <!-- ============================================ -->
 <!--                    Hero                      -->
 <!-- ============================================ -->
+<section id="hero-slider">
+    <!-- Carousel Slides Container -->
+    <div class="slider-container">
 
+        <!-- Slide 1 -->
+        <div class="slide active">
+            <div class="slide-bg">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="/assets/images/m1.webp">
+                    <source media="(min-width: 601px)" srcset="/assets/images/1.webp">
+                    <img src="/assets/images/1.webp" alt="Modern living room plumbing renovation in Edmonton" decoding="async">
+                </picture>
+            </div>
+        </div>
 
-<div class="carousel">
+        <!-- Slide 2 -->
+        <div class="slide">
+            <div class="slide-bg">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="/assets/images/m2.webp">
+                    <source media="(min-width: 601px)" srcset="/assets/images/2.webp">
+                    <img src="/assets/images/2.webp" alt="Luxury bathroom renovation with custom gasfitting" decoding="async">
+                </picture>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+            <div class="slide-bg">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="/assets/images/m3.webp">
+                    <source media="(min-width: 601px)" srcset="/assets/images/3.webp">
+                    <img src="/assets/images/3.webp" alt="Attic heating installation services" decoding="async">
+                </picture>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Static Overlay Content (Semantic Text) -->
+    <div class="hero-overlay">
+        <div class="cs-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Trusted Plumbing & <span class="highlight">Gasfitting</span> in Edmonton</h1>
+                <p class="hero-sub">Certified, reliable, and flexible service for homes, businesses & new builds.</p>
+
+                <div class="hero-buttons">
+                    <!-- Primary: Free Quote -->
+                    <a href="/contact" class="btn btn-primary squircle">
+                        Get a Free Quote
+                    </a>
+                    <!-- Secondary: Call Us -->
+                    <a href="tel:780-667-7169" class="btn btn-secondary squircle">
+                        Call (780) 667-7169
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carousel Controls (Optional visually, functional for accessibility) -->
+    <div class="slider-controls">
+        <div class="slider-progress-bar"></div>
+    </div>
+</section>
+
+<!-- Load GSAP (Add this before your closing </body> tag) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<!-- <div class="carousel">
     <div class="carousel-inner">
 
 
         <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
         <div class="carousel-item">
-            <!-- <img src="/assets/images/1.png"> -->
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
             <picture class="cs-background">
@@ -201,7 +273,7 @@ eleventyNavigation:
                 }
             });
         });
-        </script>
+        </script> -->
 
 <!-- </body> -->
 

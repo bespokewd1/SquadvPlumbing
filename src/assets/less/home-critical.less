@@ -1,0 +1,159 @@
+/* --- Hero Slider Layout --- */
+#hero-slider {
+    position: relative;
+    /* Height: 100vh or clamping for responsive feel */
+    height: clamp(600px, 85vh, 900px);
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--secondary); /* Fallback color */
+}
+
+/* Slide Positioning */
+.slider-container,
+.slide,
+.slide-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Background Image Handling */
+.slide-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Dark Gradient Overlay - Crucial for Text Readability */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    /* Gradient: Dark on left (text side), transparent on right (image side) */
+    background: linear-gradient(
+        90deg,
+        rgba(0, 31, 63, 0.9) 0%,
+        rgba(0, 31, 63, 0.7) 40%,
+        rgba(0, 31, 63, 0.1) 100%
+    );
+    display: flex;
+    align-items: center; /* Center content vertically */
+}
+
+/* Content Styling */
+.hero-content {
+    max-width: 650px;
+    position: relative;
+    z-index: 12;
+    color: #ffffff;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.hero-title .highlight {
+    color: var(--primaryLight); /* Gold/Yellow accent */
+}
+
+.hero-sub {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    max-width: 500px;
+}
+
+/* --- Squircle & Button Logic --- */
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    border: 2px solid transparent;
+}
+
+/* Default Fallback (Not Supported) */
+.btn.squircle {
+    border-radius: 16px;
+}
+
+/* Squircle Logic (Future Proofing) */
+@supports (corner-shape: squircle) {
+    .btn.squircle {
+        border-radius: 50px; /* High radius needed for squircle effect */
+        corner-shape: squircle;
+    }
+}
+
+/* Style Variants */
+.btn-primary {
+    background-color: #f11818; /* Your specific red CTA color */
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #d00000;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+.btn-secondary:hover {
+    background-color: #ffffff;
+    color: var(--secondary);
+    transform: translateY(-2px);
+}
+
+/* Simple Progress Bar for Carousel */
+.slider-progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    background: var(--primaryLight);
+    width: 0%;
+    z-index: 20;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .hero-overlay {
+        background: linear-gradient(
+            180deg,
+            rgba(0, 31, 63, 0.4) 0%,
+            rgba(0, 31, 63, 0.95) 60%
+        );
+        align-items: flex-end; /* Push text to bottom on mobile */
+        padding-bottom: 4rem;
+    }
+    .hero-content {
+        text-align: center;
+        margin: 0 auto;
+    }
+    .hero-buttons {
+        justify-content: center;
+    }
+}
