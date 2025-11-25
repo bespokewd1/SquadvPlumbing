@@ -214,14 +214,17 @@
   .hero-buttons {
     justify-content: center;
   }
+  #hero-slider .btn {
+    padding: 0.8rem 1.5rem;
+  }
 }
 @media (min-width: 769px) {
-  .hero-overlay .cs-container {
+  #hero-slider .hero-overlay .cs-container {
     padding-inline: 3rem;
   }
 }
 @media (min-width: 1024px) {
-  .hero-overlay {
+  #hero-slider .hero-overlay {
     --canadaBannerHeight: 57px;
   }
 }
