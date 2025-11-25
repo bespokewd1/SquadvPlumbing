@@ -2,84 +2,108 @@ document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin();
 
   const slides = document.querySelectorAll(".slide");
+  const progressBar = document.querySelector(".slider-progress-bar");
   const totalSlides = slides.length;
-  let currentSlideIndex = 0;
-  const duration = 5; // Seconds per slide
+  let currentIndex = 0;
+  let isAnimating = false;
+  let autoPlayTimer;
+  const slideDuration = 5; // Seconds
 
-  // Initialize: Hide all slides except first
+  // Initial Setup
   gsap.set(slides, { opacity: 0, zIndex: 0 });
   gsap.set(slides[0], { opacity: 1, zIndex: 1 });
 
-  // Initial text animation
+  // Initial Animations
   animateTextIn();
+  startAutoPlay();
 
-  // Start the progress bar
-  gsap.to(".slider-progress-bar", {
-    width: "100%",
-    duration: duration,
-    ease: "none",
-    repeat: -1
+  // --- Navigation Event Listeners ---
+  document.getElementById("nextSlide").addEventListener("click", () => {
+    if (isAnimating) return;
+    goToSlide(currentIndex + 1);
   });
 
-  // Carousel Logic
-  function changeSlide() {
-    const nextSlideIndex = (currentSlideIndex + 1) % totalSlides;
+  document.getElementById("prevSlide").addEventListener("click", () => {
+    if (isAnimating) return;
+    goToSlide(currentIndex - 1);
+  });
 
-    const currentSlide = slides[currentSlideIndex];
-    const nextSlide = slides[nextSlideIndex];
+  // --- Core Slide Logic ---
+  function goToSlide(newIndex) {
+    isAnimating = true;
 
-    // Timeline for transition
-    const tl = gsap.timeline();
+    // Calculate correct index (handles wrap-around)
+    let nextIndex = newIndex;
+    if (nextIndex >= totalSlides) nextIndex = 0;
+    if (nextIndex < 0) nextIndex = totalSlides - 1;
 
-    // 1. Reset Z-indexes
-    tl.set(nextSlide, { zIndex: 1 })
-      .set(currentSlide, { zIndex: 0 });
+    const currentSlide = slides[currentIndex];
+    const nextSlideEl = slides[nextIndex];
 
-    // 2. Crossfade
-    tl.fromTo(nextSlide,
+    // 1. Reset Z-indexes to prepare for crossfade
+    gsap.set(nextSlideEl, { zIndex: 1 });
+    gsap.set(currentSlide, { zIndex: 0 });
+
+    // 2. Animate Slides
+    const tl = gsap.timeline({
+      onComplete: () => {
+        currentIndex = nextIndex;
+        isAnimating = false;
+      }
+    });
+
+    tl.fromTo(nextSlideEl,
       { opacity: 0 },
       { opacity: 1, duration: 1, ease: "power2.inOut" }
     )
       .to(currentSlide,
         { opacity: 0, duration: 1, ease: "power2.inOut" },
-        "<" // Run at start of previous animation
+        "<" // Start at same time
       );
 
-    // 3. Optional: Subtle Ken Burns Scale Effect on BG Image
-    gsap.fromTo(nextSlide.querySelector('img'),
+    // 3. Optional: Reset Ken Burns effect on the new slide image
+    const nextImg = nextSlideEl.querySelector('img');
+    gsap.fromTo(nextImg,
       { scale: 1.1 },
-      { scale: 1, duration: duration, ease: "none" }
+      { scale: 1, duration: slideDuration + 1, ease: "none" } // +1 to ensure it keeps moving during transition
     );
 
-    currentSlideIndex = nextSlideIndex;
-    gsap.delayedCall(duration, changeSlide);
+    // 4. Reset AutoPlay Timer (Interaction resets the clock)
+    resetAutoPlay();
   }
 
-  // Start Loop
-  gsap.delayedCall(duration, changeSlide);
+  // --- Auto Play Logic ---
+  function startAutoPlay() {
+    // Animate Progress Bar
+    gsap.to(progressBar, {
+      width: "100%",
+      duration: slideDuration,
+      ease: "none"
+    });
 
-  // Function to animate text elements on load
+    // Trigger slide change
+    autoPlayTimer = gsap.delayedCall(slideDuration, () => {
+      goToSlide(currentIndex + 1);
+    });
+  }
+
+  function resetAutoPlay() {
+    // Kill existing timer
+    if (autoPlayTimer) autoPlayTimer.kill();
+    // Kill progress bar animation and reset
+    gsap.killTweensOf(progressBar);
+    gsap.set(progressBar, { width: "0%" });
+
+    // Restart
+    startAutoPlay();
+  }
+
+  // --- Text Animation Helper ---
   function animateTextIn() {
-    gsap.from(".hero-title", {
-      y: 30,
-      opacity: 0,
-      duration: 1,
-      delay: 0.5,
-      ease: "power3.out"
-    });
-    gsap.from(".hero-sub", {
-      y: 20,
-      opacity: 0,
-      duration: 1,
-      delay: 0.7,
-      ease: "power3.out"
-    });
-    gsap.from(".hero-buttons", {
-      y: 20,
-      opacity: 0,
-      duration: 1,
-      delay: 0.9,
-      ease: "power3.out"
-    });
+    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+    tl.from(".hero-title", { y: 30, opacity: 0, duration: 1, delay: 0.5 })
+      .from(".hero-sub", { y: 20, opacity: 0, duration: 1 }, "-=0.8")
+      .from(".hero-buttons", { y: 20, opacity: 0, duration: 1 }, "-=0.8")
+      .from(".slider-nav", { y: 20, opacity: 0, duration: 1 }, "-=0.8");
   }
 });

@@ -23,12 +23,12 @@ eleventyNavigation:
         <meta property="og:image:secure_url" content="{{ site.url }}/assets/images/ogmontano.jpg"/>
 
 
-    <link rel="preload" as="image" href="/assets/images/m1.avif" media="(max-width: 600px)">
-    <link rel="preload" as="image" href="/assets/images/1.avif" media="(min-width: 601px)">
-    <link rel="preload" as="image" href="/assets/images/m2.avif" media="(max-width: 600px)">
-    <link rel="preload" as="image" href="/assets/images/2.avif" media="(min-width: 601px)">
-    <link rel="preload" as="image" href="/assets/images/m3.avif" media="(max-width: 600px)">
-    <link rel="preload" as="image" href="/assets/images/3.avif" media="(min-width: 601px)">
+    <!-- <link rel="preload" as="image" href="/assets/images/home-images/m1.webp" media="(max-width: 600px)"> -->
+    <link rel="preload" as="image" href="/assets/images/home-images/1.webp" media="(min-width: 601px)">
+    <!-- <link rel="preload" as="image" href="/assets/images/home-images/m2.webp" media="(max-width: 600px)"> -->
+    <link rel="preload" as="image" href="/assets/images/home-images/2.webp" media="(min-width: 601px)">
+    <!-- <link rel="preload" as="image" href="/assets/images/home-images/m3.webp" media="(max-width: 600px)"> -->
+    <link rel="preload" as="image" href="/assets/images/home-images/3.webp" media="(min-width: 601px)">
 
     <!-- Load GSAP (Add this before your closing </body> tag) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -101,9 +101,9 @@ eleventyNavigation:
         <div class="slide active">
             <div class="slide-bg">
                 <picture>
-                    <source media="(max-width: 600px)" srcset="/assets/images/m1.webp">
-                    <source media="(min-width: 601px)" srcset="/assets/images/1.webp">
-                    <img src="/assets/images/1.webp" alt="Modern living room plumbing renovation in Edmonton" decoding="async">
+                    <source media="(max-width: 600px)" srcset="/assets/images/home-images/1.webp">
+                    <source media="(min-width: 601px)" srcset="/assets/images/home-images/1.webp">
+                    <img src="/assets/images/home-images/1.webp" alt="Modern living room plumbing renovation in Edmonton" decoding="async">
                 </picture>
             </div>
         </div>
@@ -112,9 +112,9 @@ eleventyNavigation:
         <div class="slide">
             <div class="slide-bg">
                 <picture>
-                    <source media="(max-width: 600px)" srcset="/assets/images/m2.webp">
-                    <source media="(min-width: 601px)" srcset="/assets/images/2.webp">
-                    <img src="/assets/images/2.webp" alt="Luxury bathroom renovation with custom gasfitting" decoding="async">
+                    <source media="(max-width: 600px)" srcset="/assets/images/home-images/2.webp">
+                    <source media="(min-width: 601px)" srcset="/assets/images/home-images/2.webp">
+                    <img src="/assets/images/home-images/2.webp" alt="Luxury bathroom renovation with custom gasfitting" decoding="async">
                 </picture>
             </div>
         </div>
@@ -123,16 +123,16 @@ eleventyNavigation:
         <div class="slide">
             <div class="slide-bg">
                 <picture>
-                    <source media="(max-width: 600px)" srcset="/assets/images/m3.webp">
-                    <source media="(min-width: 601px)" srcset="/assets/images/3.webp">
-                    <img src="/assets/images/3.webp" alt="Attic heating installation services" decoding="async">
+                    <source media="(max-width: 600px)" srcset="/assets/images/home-images/3.webp">
+                    <source media="(min-width: 601px)" srcset="/assets/images/home-images/3.webp">
+                    <img src="/assets/images/home-images/3.webp" alt="Attic heating installation services" decoding="async">
                 </picture>
             </div>
         </div>
 
     </div>
 
-    <!-- Static Overlay Content (Semantic Text) -->
+    <!-- Overlay Content -->
     <div class="hero-overlay">
         <div class="cs-container">
             <div class="hero-content">
@@ -140,23 +140,27 @@ eleventyNavigation:
                 <p class="hero-sub">Certified, reliable, and flexible service for homes, businesses & new builds.</p>
 
                 <div class="hero-buttons">
-                    <!-- Primary: Free Quote -->
-                    <a href="/contact" class="btn btn-primary squircle">
-                        Get a Free Quote
-                    </a>
-                    <!-- Secondary: Call Us -->
-                    <a href="tel:780-667-7169" class="btn btn-secondary squircle">
-                        Call (780) 667-7169
-                    </a>
+                    <a href="/contact" class="btn btn-primary squircle">Get a Free Quote</a>
+                    <a href="tel:780-667-7169" class="btn btn-secondary squircle">Call (780) 667-7169</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Carousel Controls (Optional visually, functional for accessibility) -->
-    <div class="slider-controls">
-        <div class="slider-progress-bar"></div>
+    <!-- Manual Navigation Controls -->
+    <div class="slider-nav">
+        <!-- Prev Button -->
+        <button id="prevSlide" class="nav-btn squircle" aria-label="Previous Slide">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 6l-6 6l6 6"/></svg>
+        </button>
+        <!-- Next Button -->
+        <button id="nextSlide" class="nav-btn squircle" aria-label="Next Slide">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 6l6 6l-6 6"/></svg>
+        </button>
     </div>
+
+    <!-- Progress Bar -->
+    <div class="slider-progress-bar"></div>
 </section>
 
 <!-- Load GSAP (Add this before your closing </body> tag) -->

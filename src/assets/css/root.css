@@ -85,7 +85,8 @@
     box-sizing: border-box;
     background-color: #fff;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    position: fixed;
+    position: sticky;
+    top: 0;
     z-index: 10000;
   }
   #cs-navigation:before {
@@ -136,8 +137,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    background: #239bec;
-    background: linear-gradient(280deg, #239bec 0%, #1055bc 50%, #185fc9 100%);
+    background: linear-gradient(90deg, #ffffff 0%, #ffffff 35%, #185fc9 100%);
   }
   #cs-navigation .cs-contact-group {
     display: flex;
@@ -504,10 +504,10 @@
     padding: 0;
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
-    background: #239bec;
-    background: linear-gradient(280deg, #239bec 0%, #1055bc 50%, #185fc9 100%);
+    background: linear-gradient(90deg, #ffffff 0%, #ffffff 35%, #185fc9 100%);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    position: fixed;
+    position: sticky;
+    top: 0;
     z-index: 10000;
   }
   #cs-navigation .cs-top-bar {

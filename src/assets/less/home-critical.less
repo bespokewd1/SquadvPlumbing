@@ -6,7 +6,6 @@
     width: 100%;
     overflow: hidden;
     background-color: var(--secondary); /* Fallback color */
-}
 
 /* Slide Positioning */
 .slider-container,
@@ -44,6 +43,14 @@
     );
     display: flex;
     align-items: center; /* Center content vertically */
+    margin-top: var(--canadaBannerHeight);
+
+    .cs-container {
+      max-width: 80rem;
+      width: 100%;
+      margin-inline: auto;
+      padding-inline: 1rem;
+    }
 }
 
 /* Content Styling */
@@ -60,6 +67,7 @@
     line-height: 1.1;
     margin-bottom: 1.5rem;
     color: #ffffff;
+  text-shadow: 0px 1px 2px rgb(0 0 0 / 0.3), 0px 3px 2px rgb(0 0 0 / 0.3), 0px 4px 8px rgb(0 0 0 / 0.3)
 }
 
 .hero-title .highlight {
@@ -72,6 +80,8 @@
     margin-bottom: 2.5rem;
     opacity: 0.9;
     max-width: 500px;
+    color: var(--bodyTextColorWhite);
+  text-shadow: 0px 1px 2px rgb(0 0 0 / 0.2), 0px 3px 2px rgb(0 0 0 / 0.2), 0px 4px 8px rgb(0 0 0 / 0.2)
 }
 
 /* --- Squircle & Button Logic --- */
@@ -98,6 +108,69 @@
     border-radius: 16px;
 }
 
+/* --- Navigation Controls --- */
+.slider-nav {
+    position: absolute;
+    bottom: 3rem; /* 48px from bottom */
+    right: 3rem;  /* 48px from right */
+    z-index: 25;
+    display: flex;
+    gap: 0.75rem;
+}
+
+.nav-btn {
+    width: 3.125rem; /* 50px */
+    height: 3.125rem; /* 50px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    cursor: pointer;
+    // transition: 0.3s ease;
+    transition-duration: 0.35s;
+    transition-timing-function: ease;
+    transition-property: background-color, transform, color;
+    padding: 0; /* Remove default padding */
+}
+
+/* Fallback Radius */
+.nav-btn.squircle {
+    border-radius: 12px;
+}
+
+/* Squircle Logic */
+@supports (corner-shape: squircle) {
+    .nav-btn.squircle {
+        border-radius: 50%; /* Sets base for squircle */
+        corner-shape: squircle;
+    }
+}
+
+/* Hover Effect (Matches Secondary CTA) */
+.nav-btn:hover {
+    background-color: #ffffff;
+    color: var(--secondary); /* Dark Blue text color */
+    transform: translateY(-2px);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .slider-nav {
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+    .nav-btn {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    /* Hide progress bar on mobile if it feels cluttered */
+    .slider-progress-bar {
+        display: none;
+    }
+}
+
 /* Squircle Logic (Future Proofing) */
 @supports (corner-shape: squircle) {
     .btn.squircle {
@@ -108,12 +181,13 @@
 
 /* Style Variants */
 .btn-primary {
-    background-color: #f11818; /* Your specific red CTA color */
+    background-color:var(--primary); /* Your specific red CTA color */
     color: white;
 }
 .btn-primary:hover {
-    background-color: #d00000;
-    transform: translateY(-2px);
+    background-color: var(--primaryLight);
+    color: var(--secondary);
+    // transform: translateY(-2px);
 }
 
 .btn-secondary {
@@ -124,7 +198,7 @@
 .btn-secondary:hover {
     background-color: #ffffff;
     color: var(--secondary);
-    transform: translateY(-2px);
+    // transform: translateY(-2px);
 }
 
 /* Simple Progress Bar for Carousel */
@@ -137,8 +211,7 @@
     width: 0%;
     z-index: 20;
 }
-
-/* Mobile Adjustments */
+}
 @media (max-width: 768px) {
     .hero-overlay {
         background: linear-gradient(
@@ -148,6 +221,10 @@
         );
         align-items: flex-end; /* Push text to bottom on mobile */
         padding-bottom: 4rem;
+
+    }
+    .hero-sub {
+      margin-inline: auto;
     }
     .hero-content {
         text-align: center;
@@ -157,3 +234,21 @@
         justify-content: center;
     }
 }
+
+@media (min-width: 769px)
+{
+  .hero-overlay {
+    .cs-container {
+      padding-inline: 3rem;
+    }
+  }
+}
+
+@media (min-width: 1024px)
+{
+  .hero-overlay {
+    --canadaBannerHeight: 57px;
+
+  }
+}
+

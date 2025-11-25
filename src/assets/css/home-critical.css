@@ -7,26 +7,37 @@
   overflow: hidden;
   background-color: var(--secondary);
   /* Fallback color */
+  /* Slide Positioning */
+  /* Background Image Handling */
+  /* Dark Gradient Overlay - Crucial for Text Readability */
+  /* Content Styling */
+  /* --- Squircle & Button Logic --- */
+  /* Default Fallback (Not Supported) */
+  /* --- Navigation Controls --- */
+  /* Fallback Radius */
+  /* Squircle Logic */
+  /* Hover Effect (Matches Secondary CTA) */
+  /* Mobile Adjustments */
+  /* Squircle Logic (Future Proofing) */
+  /* Style Variants */
+  /* Simple Progress Bar for Carousel */
 }
-/* Slide Positioning */
-.slider-container,
-.slide,
-.slide-bg {
+#hero-slider .slider-container,
+#hero-slider .slide,
+#hero-slider .slide-bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-/* Background Image Handling */
-.slide-bg img {
+#hero-slider .slide-bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
-/* Dark Gradient Overlay - Crucial for Text Readability */
-.hero-overlay {
+#hero-slider .hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -38,39 +49,47 @@
   display: flex;
   align-items: center;
   /* Center content vertically */
+  margin-top: var(--canadaBannerHeight);
 }
-/* Content Styling */
-.hero-content {
+#hero-slider .hero-overlay .cs-container {
+  max-width: 80rem;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+#hero-slider .hero-content {
   max-width: 650px;
   position: relative;
   z-index: 12;
   color: #ffffff;
 }
-.hero-title {
+#hero-slider .hero-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 900;
   line-height: 1.1;
   margin-bottom: 1.5rem;
   color: #ffffff;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 3px 2px rgba(0, 0, 0, 0.3), 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
-.hero-title .highlight {
+#hero-slider .hero-title .highlight {
   color: var(--primaryLight);
   /* Gold/Yellow accent */
 }
-.hero-sub {
+#hero-slider .hero-sub {
   font-size: clamp(1rem, 1.5vw, 1.25rem);
   line-height: 1.5;
   margin-bottom: 2.5rem;
   opacity: 0.9;
   max-width: 500px;
+  color: var(--bodyTextColorWhite);
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 3px 2px rgba(0, 0, 0, 0.2), 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
-/* --- Squircle & Button Logic --- */
-.hero-buttons {
+#hero-slider .hero-buttons {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
 }
-.btn {
+#hero-slider .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -81,40 +100,95 @@
   font-size: 1rem;
   border: 2px solid transparent;
 }
-/* Default Fallback (Not Supported) */
-.btn.squircle {
+#hero-slider .btn.squircle {
   border-radius: 16px;
 }
-/* Squircle Logic (Future Proofing) */
+#hero-slider .slider-nav {
+  position: absolute;
+  bottom: 3rem;
+  /* 48px from bottom */
+  right: 3rem;
+  /* 48px from right */
+  z-index: 25;
+  display: flex;
+  gap: 0.75rem;
+}
+#hero-slider .nav-btn {
+  width: 3.125rem;
+  /* 50px */
+  height: 3.125rem;
+  /* 50px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  cursor: pointer;
+  transition-duration: 0.35s;
+  transition-timing-function: ease;
+  transition-property: background-color, transform, color;
+  padding: 0;
+  /* Remove default padding */
+}
+#hero-slider .nav-btn.squircle {
+  border-radius: 12px;
+}
 @supports (corner-shape: squircle) {
-  .btn.squircle {
+  #hero-slider .nav-btn.squircle {
+    border-radius: 50%;
+    /* Sets base for squircle */
+    corner-shape: squircle;
+  }
+}
+#hero-slider .nav-btn:hover {
+  background-color: #ffffff;
+  color: var(--secondary);
+  /* Dark Blue text color */
+  transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+  #hero-slider {
+    /* Hide progress bar on mobile if it feels cluttered */
+  }
+  #hero-slider .slider-nav {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+  #hero-slider .nav-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  #hero-slider .slider-progress-bar {
+    display: none;
+  }
+}
+@supports (corner-shape: squircle) {
+  #hero-slider .btn.squircle {
     border-radius: 50px;
     /* High radius needed for squircle effect */
     corner-shape: squircle;
   }
 }
-/* Style Variants */
-.btn-primary {
-  background-color: #f11818;
+#hero-slider .btn-primary {
+  background-color: var(--primary);
   /* Your specific red CTA color */
   color: white;
 }
-.btn-primary:hover {
-  background-color: #d00000;
-  transform: translateY(-2px);
+#hero-slider .btn-primary:hover {
+  background-color: var(--primaryLight);
+  color: var(--secondary);
 }
-.btn-secondary {
+#hero-slider .btn-secondary {
   background-color: transparent;
   border-color: #ffffff;
   color: #ffffff;
 }
-.btn-secondary:hover {
+#hero-slider .btn-secondary:hover {
   background-color: #ffffff;
   color: var(--secondary);
-  transform: translateY(-2px);
 }
-/* Simple Progress Bar for Carousel */
-.slider-progress-bar {
+#hero-slider .slider-progress-bar {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -123,7 +197,6 @@
   width: 0%;
   z-index: 20;
 }
-/* Mobile Adjustments */
 @media (max-width: 768px) {
   .hero-overlay {
     background: linear-gradient(180deg, rgba(0, 31, 63, 0.4) 0%, rgba(0, 31, 63, 0.95) 60%);
@@ -131,11 +204,24 @@
     /* Push text to bottom on mobile */
     padding-bottom: 4rem;
   }
+  .hero-sub {
+    margin-inline: auto;
+  }
   .hero-content {
     text-align: center;
     margin: 0 auto;
   }
   .hero-buttons {
     justify-content: center;
+  }
+}
+@media (min-width: 769px) {
+  .hero-overlay .cs-container {
+    padding-inline: 3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .hero-overlay {
+    --canadaBannerHeight: 57px;
   }
 }
