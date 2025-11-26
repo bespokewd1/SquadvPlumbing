@@ -4,6 +4,7 @@
 /* CodeStitch Root and Helpers */
 @media only screen and (min-width: 0rem) {
   :root {
+    /* Legacy (will be removed/changed) */
     --primary: #3952a2;
     --primaryLight: #ffd675;
     --secondary: #001f3f;
@@ -22,6 +23,25 @@
     --canada-banner-bg: #28a745;
     --text-shadow-lg: 0px 1px 2px rgba(0, 0, 0, 0.25),
             0px 3px 2px rgb(0 0 0 / 0.25), 0px 4px 8px rgb(0 0 0 / 0.25);
+    /* Brand core */
+    --color-accent: #e0312c;
+    /* red from logo */
+    --color-accent-soft: #ff6358;
+    /* lighter version for hovers / backgrounds */
+    --color-accent-dark: #b02522;
+    /* darker version for active / borders */
+    --color-primary: #4b5e7d;
+    /* SquadV text navy */
+    --color-primary-dark: #344158;
+    --color-primary-light: #b7c0cf;
+    /* Neutrals */
+    --color-bg: #ffffff;
+    --color-text-main: #333840;
+    --color-text-muted: #8a929e;
+    --color-border: #dde2ec;
+    /* Utility */
+    --color-black: #000000;
+    --color-white: #ffffff;
   }
   .cs-topper {
     display: block;

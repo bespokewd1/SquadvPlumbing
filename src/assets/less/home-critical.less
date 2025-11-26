@@ -5,190 +5,299 @@
     height: clamp(600px, 85vh, 900px);
     width: 100%;
     overflow: hidden;
-    background-color: var(--secondary); /* Fallback color */
+    background-color: var(--color-bg); /* Fallback color */
 
-/* Slide Positioning */
-.slider-container,
-.slide,
-.slide-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
+    /* Slide Positioning */
+    .slider-container,
+    .slide,
+    .slide-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 
-/* Background Image Handling */
-.slide-bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
+    /* Background Image Handling */
+    .slide-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
 
-/* Dark Gradient Overlay - Crucial for Text Readability */
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-    /* Gradient: Dark on left (text side), transparent on right (image side) */
-    background: linear-gradient(
-        90deg,
-        rgba(0, 31, 63, 0.9) 0%,
-        rgba(0, 31, 63, 0.7) 40%,
-        rgba(0, 31, 63, 0.1) 100%
-    );
-    display: flex;
-    align-items: center; /* Center content vertically */
-    margin-top: var(--canadaBannerHeight);
+    /* Dark Gradient Overlay - Crucial for Text Readability */
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        /* Gradient: Dark on left (text side), transparent on right (image side) */
+        background: linear-gradient(
+            90deg,
+            rgba(0, 31, 63, 0.9) 0%,
+            rgba(0, 31, 63, 0.7) 40%,
+            rgba(0, 31, 63, 0.1) 100%
+        );
+        display: flex;
+        align-items: center; /* Center content vertically */
+        margin-top: var(--canadaBannerHeight);
 
-    .cs-container {
-      max-width: 80rem;
-      width: 100%;
-      margin-inline: auto;
-      padding-inline: 1rem;
+        .cs-container {
+            max-width: 80rem;
+            width: 100%;
+            margin-inline: auto;
+            padding-inline: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            background: linear-gradient(
+                180deg,
+                rgba(0, 31, 63, 0.4) 0%,
+                rgba(0, 31, 63, 0.95) 60%
+            );
+            // align-items: flex-end; /* Push text to bottom on mobile */
+            padding-bottom: 4rem;
+        }
+
+        @media (min-width: 1024px) {
+            // align-items: flex-end; /* Push content to bottom */
+            padding-bottom: 3rem;
+        }
+    }
+
+    /* Content Styling */
+    .hero-content {
+        max-width: 650px;
+        position: relative;
+        z-index: 12;
+        color: var(--color-white);
+
+        @media (max-width: 768px) {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 1024px) {
+            margin-bottom: 2rem;
+            max-width: 800px; /* Allow wider text since it's above cards */
+        }
+    }
+
+    .hero-title {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 900;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        color: var(--color-white);
+        text-shadow: 0px 1px 2px rgb(0 0 0 / 0.3), 0px 3px 2px rgb(0 0 0 / 0.3), 0px 4px 8px rgb(0 0 0 / 0.3)
+    }
+
+    .hero-title .highlight {
+        color: var(--color-accent-soft); /* Gold/Yellow accent */
+    }
+
+    .hero-sub {
+        font-size: clamp(1rem, 1.5vw, 1.25rem);
+        line-height: 1.5;
+        margin-bottom: 2.5rem;
+        opacity: 0.9;
+        max-width: 500px;
+        color: var(--color-white);
+        text-shadow: 0px 1px 2px rgb(0 0 0 / 0.2), 0px 3px 2px rgb(0 0 0 / 0.2), 0px 4px 8px rgb(0 0 0 / 0.2);
+
+        @media (max-width: 768px) {
+            margin-inline: auto;
+        }
+    }
+
+    /* --- Squircle & Button Logic --- */
+    .hero-buttons {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+
+        @media (max-width: 768px) {
+            justify-content: center;
+        }
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 2rem;
+        font-weight: 700;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 1rem;
+        border: 2px solid transparent;
+
+        @media (max-width: 768px) {
+            padding: 0.8rem 1.5rem;
+        }
+    }
+
+    /* Default Fallback (Not Supported) */
+    .btn.squircle {
+        border-radius: 16px;
+    }
+
+    /* --- Navigation Controls --- */
+    .slider-nav {
+        position: absolute;
+        // bottom: 3rem; /* 48px from bottom */
+        right: 3rem;  /* 48px from right */
+        z-index: 25;
+        display: flex;
+        gap: 0.75rem;
+        top: calc(var(--canadaBannerHeight) + 1rem);
+
+        @media (max-width: 768px) {
+            bottom: 1.5rem;
+            right: 1.5rem;
+        }
+    }
+
+    .nav-btn {
+        width: 3.125rem; /* 50px */
+        height: 3.125rem; /* 50px */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        border: 2px solid var(--color-white);
+        color: var(--color-white);
+        cursor: pointer;
+        transition-duration: 0.35s;
+        transition-timing-function: ease;
+        transition-property: background-color, transform, color;
+        padding: 0; /* Remove default padding */
+
+        /* Fallback Radius */
+        &.squircle {
+            border-radius: 12px;
+        }
+
+        /* Squircle Logic */
+        @supports (corner-shape: squircle) {
+            &.squircle {
+                border-radius: 50%; /* Sets base for squircle */
+                corner-shape: squircle;
+            }
+        }
+
+        /* Hover Effect (Matches Secondary CTA) */
+        &:hover {
+            background-color: var(--color-white);
+            color: var(--color-text-main); /* Dark Blue text color */
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+    }
+
+    /* Simple Progress Bar for Carousel */
+    .slider-progress-bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 5px;
+        background: var(--color-accent-dark);
+        width: 0%;
+        z-index: 20;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    /* Squircle Logic (Future Proofing) */
+    @supports (corner-shape: squircle) {
+        .btn.squircle {
+            border-radius: 50px; /* High radius needed for squircle effect */
+            corner-shape: squircle;
+        }
+    }
+
+    /* Style Variants */
+    .btn-primary {
+        background-color:var(--color-accent-dark); /* Your specific red CTA color */
+        color: var(--color-white);
+
+        &:hover {
+            background-color: var(--color-white);
+            color: var(--color-text-main);
+            // transform: translateY(-2px);
+        }
+    }
+
+    .btn-secondary {
+        background-color: transparent;
+        border-color: var(--color-white);
+        color: var(--color-white);
+
+        &:hover {
+            background-color: var(--color-white);
+            color: var(--color-text-main);
+            // transform: translateY(-2px);
+        }
+    }
+
+    @media (min-width: 769px) {
+        .hero-overlay {
+            .cs-container {
+                padding-inline: 3rem;
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        --canadaBannerHeight: 57px;
     }
 }
 
-/* Content Styling */
-.hero-content {
-    max-width: 650px;
-    position: relative;
-    z-index: 12;
-    color: #ffffff;
+
+.section-cards {
+    background-color: rgba(0, 31, 63)
+
 }
 
-.hero-title {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 900;
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
-    color: #ffffff;
-  text-shadow: 0px 1px 2px rgb(0 0 0 / 0.3), 0px 3px 2px rgb(0 0 0 / 0.3), 0px 4px 8px rgb(0 0 0 / 0.3)
-}
-
-.hero-title .highlight {
-    color: var(--primaryLight); /* Gold/Yellow accent */
-}
-
-.hero-sub {
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
-    line-height: 1.5;
-    margin-bottom: 2.5rem;
-    opacity: 0.9;
-    max-width: 500px;
-    color: var(--bodyTextColorWhite);
-  text-shadow: 0px 1px 2px rgb(0 0 0 / 0.2), 0px 3px 2px rgb(0 0 0 / 0.2), 0px 4px 8px rgb(0 0 0 / 0.2)
-}
-
-/* --- Squircle & Button Logic --- */
-.hero-buttons {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 2rem;
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-size: 1rem;
-    border: 2px solid transparent;
-}
-
-/* Default Fallback (Not Supported) */
-.btn.squircle {
-    border-radius: 16px;
-}
-
-/* --- Navigation Controls --- */
-.slider-nav {
-    position: absolute;
-    // bottom: 3rem; /* 48px from bottom */
-    right: 3rem;  /* 48px from right */
-    z-index: 25;
-    display: flex;
-    gap: 0.75rem;
-    top: calc(var(--canadaBannerHeight) + 1rem);
-}
-
-
-.nav-btn {
-    width: 3.125rem; /* 50px */
-    height: 3.125rem; /* 50px */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    border: 2px solid #ffffff;
-    color: #ffffff;
-    cursor: pointer;
-    // transition: 0.3s ease;
-    transition-duration: 0.35s;
-    transition-timing-function: ease;
-    transition-property: background-color, transform, color;
-    padding: 0; /* Remove default padding */
-}
-
-/* Fallback Radius */
-.nav-btn.squircle {
-    border-radius: 12px;
-}
-
-/* Squircle Logic */
-@supports (corner-shape: squircle) {
-    .nav-btn.squircle {
-        border-radius: 50%; /* Sets base for squircle */
-        corner-shape: squircle;
-    }
-}
-
-/* Hover Effect (Matches Secondary CTA) */
-.nav-btn:hover {
-    background-color: #ffffff;
-    color: var(--secondary); /* Dark Blue text color */
-    transform: translateY(-2px);
-}
-
-    /* --- 2. HERO CARDS LAYOUT --- */
     .hero-cards {
-        margin-top: 3rem;
+      max-width: 80rem;
+      margin-inline: auto;
         width: 100%;
         display: grid;
         gap: 1rem;
 
-        /* Mobile: Horizontal Scroll (Carousel feel) */
-        grid-template-columns: repeat(4, 85%); /* Show part of next card */
-        overflow-x: auto;
-        padding-bottom: 1rem; /* Space for scrollbar/touch */
-        scroll-snap-type: x mandatory;
+        /* Mobile default: 1 column stack */
+        grid-template-columns: 1fr;
+        overflow: visible;   /* no horizontal scrolling */
+        padding-block: 2.5rem;
+        padding-inline: 1rem;
 
-        /* Hide scrollbar for cleaner look */
-        scrollbar-width: none; /* Firefox */
-        &::-webkit-scrollbar {
-            display: none; /* Chrome/Safari */
+        /* ≥640px (small tablets / large phones): 2 columns */
+        @media (min-width: 640px) and (max-width: 1023px) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            padding-block: 3rem;
         }
 
-        /* Desktop: 4 Column Grid */
+        /* ≥1024px: 4 columns in a row */
         @media (min-width: 1024px) {
-            grid-template-columns: repeat(4, 1fr);
-            margin-top: 4rem;
-            overflow-x: visible;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            margin-top: -8rem;
             position: relative;
             z-index: 20; /* Ensure clickable over overlay */
         }
     }
 
-    /* --- 3. INDIVIDUAL CARD STYLING --- */
     .hero-card {
-        background-color: fade(#001f3f, 85%); /* Secondary Color @ 85% opacity */
+        background-color: var(--color-primary);
         backdrop-filter: blur(8px); /* Glass effect */
         -webkit-backdrop-filter: blur(8px);
         border: 1px solid fade(#ffffff, 10%);
@@ -210,8 +319,8 @@
 
         &:hover {
             transform: translateY(-5px);
-            background-color: var(--primary); /* Blue highlight on hover */
-            border-color: var(--primaryLight);
+            background-color: var(--color-primary-light);
+            border-color: var(--color-primary-light);
 
             .card-icon {
                 transform: scale(1.1) rotate(5deg);
@@ -252,120 +361,3 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
     }
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-    .slider-nav {
-        bottom: 1.5rem;
-        right: 1.5rem;
-    }
-    .nav-btn {
-        width: 2.5rem;
-        height: 2.5rem;
-    }
-    /* Hide progress bar on mobile if it feels cluttered */
-    .slider-progress-bar {
-        display: none;
-    }
-}
-
-/* Squircle Logic (Future Proofing) */
-@supports (corner-shape: squircle) {
-    .btn.squircle {
-        border-radius: 50px; /* High radius needed for squircle effect */
-        corner-shape: squircle;
-    }
-}
-
-/* Style Variants */
-.btn-primary {
-    background-color:var(--primary); /* Your specific red CTA color */
-    color: white;
-}
-.btn-primary:hover {
-    background-color: var(--primaryLight);
-    color: var(--secondary);
-    // transform: translateY(-2px);
-}
-
-.btn-secondary {
-    background-color: transparent;
-    border-color: #ffffff;
-    color: #ffffff;
-}
-.btn-secondary:hover {
-    background-color: #ffffff;
-    color: var(--secondary);
-    // transform: translateY(-2px);
-}
-
-/* Simple Progress Bar for Carousel */
-.slider-progress-bar {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 5px;
-    background: var(--primaryLight);
-    width: 0%;
-    z-index: 20;
-}
-}
-@media (max-width: 768px) {
-    .hero-overlay {
-        background: linear-gradient(
-            180deg,
-            rgba(0, 31, 63, 0.4) 0%,
-            rgba(0, 31, 63, 0.95) 60%
-        );
-        align-items: flex-end; /* Push text to bottom on mobile */
-        padding-bottom: 4rem;
-
-    }
-    .hero-sub {
-      margin-inline: auto;
-    }
-    .hero-content {
-        text-align: center;
-        margin: 0 auto;
-    }
-    .hero-buttons {
-        justify-content: center;
-    }
- #hero-slider
- {
- .btn {
-    padding: 0.8rem 1.5rem;
-  }
-}
-}
-
-@media (min-width: 769px)
-{
-  #hero-slider
-  {
-    .hero-overlay {
-    .cs-container {
-      padding-inline: 3rem;
-    }
-  }
-}
-}
-
-@media (min-width: 1024px)
-{
-  #hero-slider
-  {
-    .hero-overlay {
- align-items: flex-end; /* Push content to bottom */
-        padding-bottom: 3rem;
-    --canadaBannerHeight: 57px;
-
-  }
-
-.hero-content {
-        margin-bottom: 2rem;
-        max-width: 800px; /* Allow wider text since it's above cards */
-    }
-}
-}
-

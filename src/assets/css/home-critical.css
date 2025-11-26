@@ -5,7 +5,7 @@
   height: clamp(600px, 85vh, 900px);
   width: 100%;
   overflow: hidden;
-  background-color: var(--secondary);
+  background-color: var(--color-bg);
   /* Fallback color */
   /* Slide Positioning */
   /* Background Image Handling */
@@ -14,15 +14,9 @@
   /* --- Squircle & Button Logic --- */
   /* Default Fallback (Not Supported) */
   /* --- Navigation Controls --- */
-  /* Fallback Radius */
-  /* Squircle Logic */
-  /* Hover Effect (Matches Secondary CTA) */
-  /* --- 2. HERO CARDS LAYOUT --- */
-  /* --- 3. INDIVIDUAL CARD STYLING --- */
-  /* Mobile Adjustments */
+  /* Simple Progress Bar for Carousel */
   /* Squircle Logic (Future Proofing) */
   /* Style Variants */
-  /* Simple Progress Bar for Carousel */
 }
 #hero-slider .slider-container,
 #hero-slider .slide,
@@ -59,22 +53,46 @@
   margin-inline: auto;
   padding-inline: 1rem;
 }
+@media (max-width: 768px) {
+  #hero-slider .hero-overlay {
+    background: linear-gradient(180deg, rgba(0, 31, 63, 0.4) 0%, rgba(0, 31, 63, 0.95) 60%);
+    padding-bottom: 4rem;
+  }
+}
+@media (min-width: 1024px) {
+  #hero-slider .hero-overlay {
+    padding-bottom: 3rem;
+  }
+}
 #hero-slider .hero-content {
   max-width: 650px;
   position: relative;
   z-index: 12;
-  color: #ffffff;
+  color: var(--color-white);
+}
+@media (max-width: 768px) {
+  #hero-slider .hero-content {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1024px) {
+  #hero-slider .hero-content {
+    margin-bottom: 2rem;
+    max-width: 800px;
+    /* Allow wider text since it's above cards */
+  }
 }
 #hero-slider .hero-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 900;
   line-height: 1.1;
   margin-bottom: 1.5rem;
-  color: #ffffff;
+  color: var(--color-white);
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 3px 2px rgba(0, 0, 0, 0.3), 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 #hero-slider .hero-title .highlight {
-  color: var(--primaryLight);
+  color: var(--color-accent-soft);
   /* Gold/Yellow accent */
 }
 #hero-slider .hero-sub {
@@ -83,13 +101,23 @@
   margin-bottom: 2.5rem;
   opacity: 0.9;
   max-width: 500px;
-  color: var(--bodyTextColorWhite);
+  color: var(--color-white);
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 3px 2px rgba(0, 0, 0, 0.2), 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  #hero-slider .hero-sub {
+    margin-inline: auto;
+  }
 }
 #hero-slider .hero-buttons {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  #hero-slider .hero-buttons {
+    justify-content: center;
+  }
 }
 #hero-slider .btn {
   display: inline-flex;
@@ -101,6 +129,11 @@
   transition: all 0.3s ease;
   font-size: 1rem;
   border: 2px solid transparent;
+}
+@media (max-width: 768px) {
+  #hero-slider .btn {
+    padding: 0.8rem 1.5rem;
+  }
 }
 #hero-slider .btn.squircle {
   border-radius: 16px;
@@ -114,6 +147,12 @@
   gap: 0.75rem;
   top: calc(var(--canadaBannerHeight) + 1rem);
 }
+@media (max-width: 768px) {
+  #hero-slider .slider-nav {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}
 #hero-slider .nav-btn {
   width: 3.125rem;
   /* 50px */
@@ -123,14 +162,17 @@
   align-items: center;
   justify-content: center;
   background-color: transparent;
-  border: 2px solid #ffffff;
-  color: #ffffff;
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
   cursor: pointer;
   transition-duration: 0.35s;
   transition-timing-function: ease;
   transition-property: background-color, transform, color;
   padding: 0;
   /* Remove default padding */
+  /* Fallback Radius */
+  /* Squircle Logic */
+  /* Hover Effect (Matches Secondary CTA) */
 }
 #hero-slider .nav-btn.squircle {
   border-radius: 12px;
@@ -143,45 +185,101 @@
   }
 }
 #hero-slider .nav-btn:hover {
-  background-color: #ffffff;
-  color: var(--secondary);
+  background-color: var(--color-white);
+  color: var(--color-text-main);
   /* Dark Blue text color */
   transform: translateY(-2px);
 }
-#hero-slider .hero-cards {
-  margin-top: 3rem;
+@media (max-width: 768px) {
+  #hero-slider .nav-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+#hero-slider .slider-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  background: var(--color-accent-dark);
+  width: 0%;
+  z-index: 20;
+}
+@media (max-width: 768px) {
+  #hero-slider .slider-progress-bar {
+    display: none;
+  }
+}
+@supports (corner-shape: squircle) {
+  #hero-slider .btn.squircle {
+    border-radius: 50px;
+    /* High radius needed for squircle effect */
+    corner-shape: squircle;
+  }
+}
+#hero-slider .btn-primary {
+  background-color: var(--color-accent-dark);
+  /* Your specific red CTA color */
+  color: var(--color-white);
+}
+#hero-slider .btn-primary:hover {
+  background-color: var(--color-white);
+  color: var(--color-text-main);
+}
+#hero-slider .btn-secondary {
+  background-color: transparent;
+  border-color: var(--color-white);
+  color: var(--color-white);
+}
+#hero-slider .btn-secondary:hover {
+  background-color: var(--color-white);
+  color: var(--color-text-main);
+}
+@media (min-width: 769px) {
+  #hero-slider .hero-overlay .cs-container {
+    padding-inline: 3rem;
+  }
+}
+@media (min-width: 1024px) {
+  #hero-slider {
+    --canadaBannerHeight: 57px;
+  }
+}
+.section-cards {
+  background-color: rgba(0, 31, 63);
+}
+.hero-cards {
+  max-width: 80rem;
+  margin-inline: auto;
   width: 100%;
   display: grid;
   gap: 1rem;
-  /* Mobile: Horizontal Scroll (Carousel feel) */
-  grid-template-columns: repeat(4, 85%);
-  /* Show part of next card */
-  overflow-x: auto;
-  padding-bottom: 1rem;
-  /* Space for scrollbar/touch */
-  scroll-snap-type: x mandatory;
-  /* Hide scrollbar for cleaner look */
-  scrollbar-width: none;
-  /* Firefox */
-  /* Desktop: 4 Column Grid */
+  /* Mobile default: 1 column stack */
+  grid-template-columns: 1fr;
+  overflow: visible;
+  /* no horizontal scrolling */
+  padding-block: 2.5rem;
+  padding-inline: 1rem;
+  /* ≥640px (small tablets / large phones): 2 columns */
+  /* ≥1024px: 4 columns in a row */
 }
-#hero-slider .hero-cards::-webkit-scrollbar {
-  display: none;
-  /* Chrome/Safari */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .hero-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-block: 3rem;
+  }
 }
 @media (min-width: 1024px) {
-  #hero-slider .hero-cards {
-    grid-template-columns: repeat(4, 1fr);
-    margin-top: 4rem;
-    overflow-x: visible;
+  .hero-cards {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-top: -8rem;
     position: relative;
     z-index: 20;
     /* Ensure clickable over overlay */
   }
 }
-#hero-slider .hero-card {
-  background-color: rgba(0, 31, 63, 0.85);
-  /* Secondary Color @ 85% opacity */
+.hero-card {
+  background-color: var(--color-primary);
   backdrop-filter: blur(8px);
   /* Glass effect */
   -webkit-backdrop-filter: blur(8px);
@@ -200,38 +298,37 @@
   /* Squircle support if browser allows */
 }
 @supports (corner-shape: squircle) {
-  #hero-slider .hero-card {
+  .hero-card {
     border-radius: 20px;
     corner-shape: squircle;
   }
 }
-#hero-slider .hero-card:hover {
+.hero-card:hover {
   transform: translateY(-5px);
-  background-color: var(--primary);
-  /* Blue highlight on hover */
-  border-color: var(--primaryLight);
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary-light);
 }
-#hero-slider .hero-card:hover .card-icon {
+.hero-card:hover .card-icon {
   transform: scale(1.1) rotate(5deg);
 }
-#hero-slider .card-icon {
+.card-icon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   transition: transform 0.3s ease;
 }
-#hero-slider .card-info {
+.card-info {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-#hero-slider .card-title {
+.card-title {
   font-size: 1.25rem;
   font-weight: 700;
   color: #ffffff;
   margin: 0;
   line-height: 1.2;
 }
-#hero-slider .card-desc {
+.card-desc {
   font-size: 0.9rem;
   color: var(--bodyTextColorWhite);
   margin: 0;
@@ -242,93 +339,4 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-}
-@media (max-width: 768px) {
-  #hero-slider {
-    /* Hide progress bar on mobile if it feels cluttered */
-  }
-  #hero-slider .slider-nav {
-    bottom: 1.5rem;
-    right: 1.5rem;
-  }
-  #hero-slider .nav-btn {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-  #hero-slider .slider-progress-bar {
-    display: none;
-  }
-}
-@supports (corner-shape: squircle) {
-  #hero-slider .btn.squircle {
-    border-radius: 50px;
-    /* High radius needed for squircle effect */
-    corner-shape: squircle;
-  }
-}
-#hero-slider .btn-primary {
-  background-color: var(--primary);
-  /* Your specific red CTA color */
-  color: white;
-}
-#hero-slider .btn-primary:hover {
-  background-color: var(--primaryLight);
-  color: var(--secondary);
-}
-#hero-slider .btn-secondary {
-  background-color: transparent;
-  border-color: #ffffff;
-  color: #ffffff;
-}
-#hero-slider .btn-secondary:hover {
-  background-color: #ffffff;
-  color: var(--secondary);
-}
-#hero-slider .slider-progress-bar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 5px;
-  background: var(--primaryLight);
-  width: 0%;
-  z-index: 20;
-}
-@media (max-width: 768px) {
-  .hero-overlay {
-    background: linear-gradient(180deg, rgba(0, 31, 63, 0.4) 0%, rgba(0, 31, 63, 0.95) 60%);
-    align-items: flex-end;
-    /* Push text to bottom on mobile */
-    padding-bottom: 4rem;
-  }
-  .hero-sub {
-    margin-inline: auto;
-  }
-  .hero-content {
-    text-align: center;
-    margin: 0 auto;
-  }
-  .hero-buttons {
-    justify-content: center;
-  }
-  #hero-slider .btn {
-    padding: 0.8rem 1.5rem;
-  }
-}
-@media (min-width: 769px) {
-  #hero-slider .hero-overlay .cs-container {
-    padding-inline: 3rem;
-  }
-}
-@media (min-width: 1024px) {
-  #hero-slider .hero-overlay {
-    align-items: flex-end;
-    /* Push content to bottom */
-    padding-bottom: 3rem;
-    --canadaBannerHeight: 57px;
-  }
-  #hero-slider .hero-content {
-    margin-bottom: 2rem;
-    max-width: 800px;
-    /* Allow wider text since it's above cards */
-  }
 }
