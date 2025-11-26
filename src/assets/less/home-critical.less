@@ -111,12 +111,14 @@
 /* --- Navigation Controls --- */
 .slider-nav {
     position: absolute;
-    bottom: 3rem; /* 48px from bottom */
+    // bottom: 3rem; /* 48px from bottom */
     right: 3rem;  /* 48px from right */
     z-index: 25;
     display: flex;
     gap: 0.75rem;
+    top: calc(var(--canadaBannerHeight) + 1rem);
 }
+
 
 .nav-btn {
     width: 3.125rem; /* 50px */
@@ -154,6 +156,102 @@
     color: var(--secondary); /* Dark Blue text color */
     transform: translateY(-2px);
 }
+
+    /* --- 2. HERO CARDS LAYOUT --- */
+    .hero-cards {
+        margin-top: 3rem;
+        width: 100%;
+        display: grid;
+        gap: 1rem;
+
+        /* Mobile: Horizontal Scroll (Carousel feel) */
+        grid-template-columns: repeat(4, 85%); /* Show part of next card */
+        overflow-x: auto;
+        padding-bottom: 1rem; /* Space for scrollbar/touch */
+        scroll-snap-type: x mandatory;
+
+        /* Hide scrollbar for cleaner look */
+        scrollbar-width: none; /* Firefox */
+        &::-webkit-scrollbar {
+            display: none; /* Chrome/Safari */
+        }
+
+        /* Desktop: 4 Column Grid */
+        @media (min-width: 1024px) {
+            grid-template-columns: repeat(4, 1fr);
+            margin-top: 4rem;
+            overflow-x: visible;
+            position: relative;
+            z-index: 20; /* Ensure clickable over overlay */
+        }
+    }
+
+    /* --- 3. INDIVIDUAL CARD STYLING --- */
+    .hero-card {
+        background-color: fade(#001f3f, 85%); /* Secondary Color @ 85% opacity */
+        backdrop-filter: blur(8px); /* Glass effect */
+        -webkit-backdrop-filter: blur(8px);
+        border: 1px solid fade(#ffffff, 10%);
+        padding: 1.5rem;
+        border-radius: 12px; /* Standard radius */
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        scroll-snap-align: start; /* Snap logic for mobile */
+
+        /* Squircle support if browser allows */
+        @supports (corner-shape: squircle) {
+            border-radius: 20px;
+            corner-shape: squircle;
+        }
+
+        &:hover {
+            transform: translateY(-5px);
+            background-color: var(--primary); /* Blue highlight on hover */
+            border-color: var(--primaryLight);
+
+            .card-icon {
+                transform: scale(1.1) rotate(5deg);
+            }
+        }
+    }
+
+    .card-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        transition: transform 0.3s ease;
+    }
+
+    .card-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #ffffff;
+        margin: 0;
+        line-height: 1.2;
+    }
+
+    .card-desc {
+        font-size: 0.9rem;
+        color: var(--bodyTextColorWhite);
+        margin: 0;
+        opacity: 0.9;
+        line-height: 1.4;
+
+        /* Truncate text on small screens */
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
@@ -258,9 +356,16 @@
   #hero-slider
   {
     .hero-overlay {
+ align-items: flex-end; /* Push content to bottom */
+        padding-bottom: 3rem;
     --canadaBannerHeight: 57px;
 
   }
+
+.hero-content {
+        margin-bottom: 2rem;
+        max-width: 800px; /* Allow wider text since it's above cards */
+    }
 }
 }
 
